@@ -1,0 +1,446 @@
+2025-09-07 19:34:15,913 - INFO - Network Mapper started
+2025-09-07 19:34:15,913 - INFO - Starting network mapping process
+2025-09-07 19:34:25,933 - INFO - Using existing device: NEW-NCP3
+2025-09-07 19:34:25,933 - INFO - Loaded credentials for existing device: NEW-NCP3
+2025-09-07 19:34:25,934 - INFO - Attempting to connect to YE41F7VK00003B1
+2025-09-07 19:34:26,017 - DEBUG - starting thread (client mode): 0x476b25b0
+2025-09-07 19:34:26,017 - DEBUG - Local version/idstring: SSH-2.0-paramiko_3.5.1
+2025-09-07 19:34:26,108 - DEBUG - Remote version/idstring: SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.11
+2025-09-07 19:34:26,108 - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-09-07 19:34:26,188 - DEBUG - === Key exchange possibilities ===
+2025-09-07 19:34:26,189 - DEBUG - kex algos: curve25519-sha256, curve25519-sha256@libssh.org, diffie-hellman-group16-sha512, diffie-hellman-group18-sha512, diffie-hellman-group-exchange-sha256, sntrup761x25519-sha512@openssh.com, ext-info-s, kex-strict-s-v00@openssh.com
+2025-09-07 19:34:26,189 - DEBUG - server key: rsa-sha2-512, rsa-sha2-256, ssh-ed25519
+2025-09-07 19:34:26,189 - DEBUG - client encrypt: chacha20-poly1305@openssh.com, aes256-gcm@openssh.com, aes128-gcm@openssh.com, aes256-ctr, aes192-ctr, aes128-ctr
+2025-09-07 19:34:26,189 - DEBUG - server encrypt: chacha20-poly1305@openssh.com, aes256-gcm@openssh.com, aes128-gcm@openssh.com, aes256-ctr, aes192-ctr, aes128-ctr
+2025-09-07 19:34:26,189 - DEBUG - client mac: umac-64-etm@openssh.com, umac-128-etm@openssh.com, hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com, umac-64@openssh.com, umac-128@openssh.com, hmac-sha2-256, hmac-sha2-512
+2025-09-07 19:34:26,189 - DEBUG - server mac: umac-64-etm@openssh.com, umac-128-etm@openssh.com, hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com, umac-64@openssh.com, umac-128@openssh.com, hmac-sha2-256, hmac-sha2-512
+2025-09-07 19:34:26,189 - DEBUG - client compress: none, zlib@openssh.com
+2025-09-07 19:34:26,190 - DEBUG - server compress: none, zlib@openssh.com
+2025-09-07 19:34:26,190 - DEBUG - client lang: <none>
+2025-09-07 19:34:26,190 - DEBUG - server lang: <none>
+2025-09-07 19:34:26,190 - DEBUG - kex follows: False
+2025-09-07 19:34:26,190 - DEBUG - === Key exchange agreements ===
+2025-09-07 19:34:26,190 - DEBUG - Strict kex mode: True
+2025-09-07 19:34:26,190 - DEBUG - Kex: curve25519-sha256@libssh.org
+2025-09-07 19:34:26,191 - DEBUG - HostKey: ssh-ed25519
+2025-09-07 19:34:26,191 - DEBUG - Cipher: aes128-ctr
+2025-09-07 19:34:26,191 - DEBUG - MAC: hmac-sha2-256
+2025-09-07 19:34:26,191 - DEBUG - Compression: none
+2025-09-07 19:34:26,191 - DEBUG - === End of kex handshake ===
+2025-09-07 19:34:26,319 - DEBUG - Resetting outbound seqno after NEWKEYS due to strict mode
+2025-09-07 19:34:26,319 - DEBUG - kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+2025-09-07 19:34:26,320 - DEBUG - Switch to new keys ...
+2025-09-07 19:34:26,320 - DEBUG - Resetting inbound seqno after NEWKEYS due to strict mode
+2025-09-07 19:34:26,321 - DEBUG - Got EXT_INFO: {'server-sig-algs': b'ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256', 'publickey-hostbound@openssh.com': b'0', 'ping@openssh.com': b'0'}
+2025-09-07 19:34:26,321 - DEBUG - Adding ssh-ed25519 host key for YE41F7VK00003B1: b'cc6274aa540ce24602bf49ab972429bc'
+2025-09-07 19:34:26,526 - DEBUG - userauth is OK
+2025-09-07 19:34:26,808 - INFO - Authentication (password) successful!
+2025-09-07 19:34:26,809 - DEBUG - [chan 0] Max packet in: 32768 bytes
+2025-09-07 19:34:26,889 - DEBUG - Received global request "hostkeys-00@openssh.com"
+2025-09-07 19:34:26,890 - DEBUG - Rejecting "hostkeys-00@openssh.com" global request from server.
+2025-09-07 19:34:27,016 - DEBUG - [chan 0] Max packet out: 32768 bytes
+2025-09-07 19:34:27,017 - DEBUG - Secsh channel 0 opened.
+2025-09-07 19:34:27,098 - DEBUG - [chan 0] Sesch channel 0 request ok
+2025-09-07 19:34:27,179 - DEBUG - [chan 0] Sesch channel 0 request ok
+2025-09-07 19:34:29,181 - INFO - Successfully connected to device
+2025-09-07 19:34:29,182 - INFO - Waiting for CLI to be ready
+2025-09-07 19:34:29,182 - DEBUG - Sending initial newlines to trigger prompt
+2025-09-07 19:34:31,184 - DEBUG - CLI output received: '\r\nNEW-NCP3# \r\nNEW-NCP3# '
+2025-09-07 19:34:31,184 - INFO - CLI is ready - detected prompt: 'NEW-NCP3#'
+2025-09-07 19:34:31,184 - INFO - === Stage 2: Collecting interface information ===
+2025-09-07 19:34:31,184 - INFO - Executing command: show interfaces | no-more
+2025-09-07 19:34:35,689 - DEBUG - Command completed - detected prompt: 'NEW-NCP3#'
+2025-09-07 19:34:35,690 - DEBUG - === RAW INTERFACE OUTPUT START ===
+2025-09-07 19:34:35,690 - DEBUG - Interface output length: 20928 characters
+2025-09-07 19:34:35,690 - DEBUG - Interface output has 103 lines
+2025-09-07 19:34:35,690 - DEBUG - Line 1: 'show interfaces | no-more\r'
+2025-09-07 19:34:35,690 - DEBUG - Line 2: '\r'
+2025-09-07 19:34:35,690 - DEBUG - Line 3: 'Legend: i - inner vlan, u - unnumbered interface, b - interface disabled due to breakout, L2 - l2 service interface, s - suspended IPv6 address, p - primary IP address (has secondaries), d - obtained via DHCP, v - VLAN list or range (only lowest VID is displayed), m - VLAN manipulation or L2-originated-vlans configuration is configured\r'
+2025-09-07 19:34:35,691 - DEBUG - Line 4: '\r'
+2025-09-07 19:34:35,691 - DEBUG - Line 5: '\r'
+2025-09-07 19:34:35,691 - DEBUG - Line 6: '| Interface                  |  Admin   | Operational     | IPv4 Address           | IPv6 Address                                | VLAN          | MTU  | Network-Service                             | Bundle-Id  |\r'
+2025-09-07 19:34:35,691 - DEBUG - Line 7: '+----------------------------+----------+-----------------+------------------------+---------------------------------------------+---------------+------+---------------------------------------------+------------+\r'
+2025-09-07 19:34:35,691 - DEBUG - Line 8: '| bundle-1                   | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,691 - DEBUG - Line 9: '| bundle-2                   | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,691 - DEBUG - Line 10: '| ge400-0/0/0                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |\r'
+2025-09-07 19:34:35,692 - DEBUG - Line 11: '| ge100-0/0/0/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,692 - DEBUG - Line 12: '| ge100-0/0/0/1              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,692 - DEBUG - Line 13: '| ge400-0/0/2                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |\r'
+2025-09-07 19:34:35,692 - DEBUG - Line 14: '| ge100-0/0/2/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,692 - DEBUG - Line 15: '| ge100-0/0/2/1              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,692 - DEBUG - Line 16: '| ge400-0/0/3                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |\r'
+2025-09-07 19:34:35,692 - DEBUG - Line 17: '| ge100-0/0/3/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,693 - DEBUG - Line 18: '| ge100-0/0/3/1              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,693 - DEBUG - Line 19: '| ge400-0/0/4                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |\r'
+2025-09-07 19:34:35,693 - DEBUG - Line 20: '| ge100-0/0/4/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,693 - DEBUG - ... (truncated, check full output below)
+2025-09-07 19:34:35,693 - DEBUG - Last 10 lines:
+2025-09-07 19:34:35,693 - DEBUG - Line 94: '| ge100-0/0/32/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,693 - DEBUG - Line 95: '| ge100-0/0/32/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,694 - DEBUG - Line 96: '| ge400-0/0/33               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |\r'
+2025-09-07 19:34:35,694 - DEBUG - Line 97: '| ge100-0/0/33/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,694 - DEBUG - Line 98: '| ge100-0/0/33/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,694 - DEBUG - Line 99: '| ge400-0/0/34               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |\r'
+2025-09-07 19:34:35,694 - DEBUG - Line 100: '| ge100-0/0/34/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,695 - DEBUG - Line 101: '| ge100-0/0/34/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r'
+2025-09-07 19:34:35,695 - DEBUG - Line 102: '\r'
+2025-09-07 19:34:35,695 - DEBUG - Line 103: 'NEW-NCP3# '
+2025-09-07 19:34:35,696 - DEBUG - === RAW INTERFACE OUTPUT END ===
+2025-09-07 19:34:35,696 - INFO - Parsing interface information
+2025-09-07 19:34:35,696 - DEBUG - DRIVENETS detection check: True
+2025-09-07 19:34:35,697 - DEBUG - Sample lines for detection: ['show interfaces | no-more\r', '\r', 'Legend: i - inner vlan, u - unnumbered interface, b - interface disabled due to breakout, L2 - l2 service interface, s - suspended IPv6 address, p - primary IP address (has secondaries), d - obtained via DHCP, v - VLAN list or range (only lowest VID is displayed), m - VLAN manipulation or L2-originated-vlans configuration is configured\r', '\r', '\r']
+2025-09-07 19:34:35,697 - INFO - Detected DRIVENETS device format
+2025-09-07 19:34:35,697 - INFO - Parsing DRIVENETS interface information
+2025-09-07 19:34:35,697 - DEBUG - DRIVENETS parser: Processing 103 lines
+2025-09-07 19:34:35,697 - DEBUG - First 10 lines: ['show interfaces | no-more\r', '\r', 'Legend: i - inner vlan, u - unnumbered interface, b - interface disabled due to breakout, L2 - l2 service interface, s - suspended IPv6 address, p - primary IP address (has secondaries), d - obtained via DHCP, v - VLAN list or range (only lowest VID is displayed), m - VLAN manipulation or L2-originated-vlans configuration is configured\r', '\r', '\r', '| Interface                  |  Admin   | Operational     | IPv4 Address           | IPv6 Address                                | VLAN          | MTU  | Network-Service                             | Bundle-Id  |\r', '+----------------------------+----------+-----------------+------------------------+---------------------------------------------+---------------+------+---------------------------------------------+------------+\r', '| bundle-1                   | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r', '| bundle-2                   | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |\r', '| ge400-0/0/0                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |\r']
+2025-09-07 19:34:35,698 - DEBUG - Last 10 lines: ['| ge100-0/0/32/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |\r', '| ge100-0/0/32/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r', '| ge400-0/0/33               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |\r', '| ge100-0/0/33/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |\r', '| ge100-0/0/33/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r', '| ge400-0/0/34               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |\r', '| ge100-0/0/34/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |\r', '| ge100-0/0/34/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |\r', '\r', 'NEW-NCP3# ']
+2025-09-07 19:34:35,698 - DEBUG - Found DRIVENETS table header at line 5: | Interface                  |  Admin   | Operational     | IPv4 Address           | IPv6 Address                                | VLAN          | MTU  | Network-Service                             | Bundle-Id  |
+2025-09-07 19:34:35,698 - DEBUG - Found interface data line: | bundle-1                   | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,699 - DEBUG - Found interface data line: | bundle-2                   | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,699 - DEBUG - Found interface data line: | ge400-0/0/0                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,699 - DEBUG - Found interface data line: | ge100-0/0/0/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,699 - DEBUG - Found interface data line: | ge100-0/0/0/1              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,699 - DEBUG - Found interface data line: | ge400-0/0/2                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,703 - DEBUG - Found interface data line: | ge100-0/0/2/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,704 - DEBUG - Found interface data line: | ge100-0/0/2/1              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,704 - DEBUG - Found interface data line: | ge400-0/0/3                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,704 - DEBUG - Found interface data line: | ge100-0/0/3/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,704 - DEBUG - Found interface data line: | ge100-0/0/3/1              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,704 - DEBUG - Found interface data line: | ge400-0/0/4                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,705 - DEBUG - Found interface data line: | ge100-0/0/4/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,705 - DEBUG - Found interface data line: | ge100-0/0/4/1              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,705 - DEBUG - Found interface data line: | ge400-0/0/5                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,705 - DEBUG - Found interface data line: | ge100-0/0/5/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,705 - DEBUG - Found interface data line: | ge100-0/0/5/1              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,706 - DEBUG - Found interface data line: | ge400-0/0/6                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,706 - DEBUG - Found interface data line: | ge100-0/0/6/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,706 - DEBUG - Found interface data line: | ge100-0/0/6/1              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,706 - DEBUG - Found interface data line: | ge400-0/0/7                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,706 - DEBUG - Found interface data line: | ge100-0/0/7/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,707 - DEBUG - Found interface data line: | ge100-0/0/7/1              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,707 - DEBUG - Found interface data line: | ge400-0/0/8                | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,707 - DEBUG - Found interface data line: | ge100-0/0/8/0              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,707 - DEBUG - Found interface data line: | ge100-0/0/8/1              | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,707 - DEBUG - Found interface data line: | ge400-0/0/9                | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,707 - DEBUG - Found interface data line: | ge400-0/0/10               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,707 - DEBUG - Found interface data line: | ge100-0/0/10/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,708 - DEBUG - Found interface data line: | ge100-0/0/10/1             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               | 2          |
+2025-09-07 19:34:35,708 - DEBUG - Found interface data line: | ge400-0/0/11               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,708 - DEBUG - Found interface data line: | ge100-0/0/11/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,708 - DEBUG - Found interface data line: | ge100-0/0/11/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,708 - DEBUG - Found interface data line: | ge400-0/0/12               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,708 - DEBUG - Found interface data line: | ge100-0/0/12/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,708 - DEBUG - Found interface data line: | ge100-0/0/12/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,709 - DEBUG - Found interface data line: | ge400-0/0/13               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,709 - DEBUG - Found interface data line: | ge100-0/0/13/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,709 - DEBUG - Found interface data line: | ge100-0/0/13/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,709 - DEBUG - Found interface data line: | ge400-0/0/14               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,710 - DEBUG - Found interface data line: | ge100-0/0/14/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,710 - DEBUG - Found interface data line: | ge100-0/0/14/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,710 - DEBUG - Found interface data line: | ge400-0/0/15               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,711 - DEBUG - Found interface data line: | ge100-0/0/15/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,711 - DEBUG - Found interface data line: | ge100-0/0/15/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,711 - DEBUG - Found interface data line: | ge400-0/0/16               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,711 - DEBUG - Found interface data line: | ge100-0/0/16/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,711 - DEBUG - Found interface data line: | ge100-0/0/16/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,711 - DEBUG - Found interface data line: | ge400-0/0/18               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,711 - DEBUG - Found interface data line: | ge100-0/0/18/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,712 - DEBUG - Found interface data line: | ge100-0/0/18/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,712 - DEBUG - Found interface data line: | ge400-0/0/20               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,712 - DEBUG - Found interface data line: | ge100-0/0/20/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,712 - DEBUG - Found interface data line: | ge100-0/0/20/1             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,712 - DEBUG - Found interface data line: | ge400-0/0/21               | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,712 - DEBUG - Found interface data line: | ge400-0/0/22               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,712 - DEBUG - Found interface data line: | ge100-0/0/22/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,713 - DEBUG - Found interface data line: | ge100-0/0/22/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,713 - DEBUG - Found interface data line: | ge400-0/0/23               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,713 - DEBUG - Found interface data line: | ge100-0/0/23/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,713 - DEBUG - Found interface data line: | ge100-0/0/23/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,713 - DEBUG - Found interface data line: | ge400-0/0/24               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,713 - DEBUG - Found interface data line: | ge100-0/0/24/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,713 - DEBUG - Found interface data line: | ge100-0/0/24/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,714 - DEBUG - Found interface data line: | ge400-0/0/25               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,714 - DEBUG - Found interface data line: | ge100-0/0/25/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,714 - DEBUG - Found interface data line: | ge100-0/0/25/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,714 - DEBUG - Found interface data line: | ge400-0/0/26               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,714 - DEBUG - Found interface data line: | ge100-0/0/26/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,714 - DEBUG - Found interface data line: | ge100-0/0/26/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,715 - DEBUG - Found interface data line: | ge400-0/0/27               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,715 - DEBUG - Found interface data line: | ge100-0/0/27/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,715 - DEBUG - Found interface data line: | ge100-0/0/27/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,715 - DEBUG - Found interface data line: | ge400-0/0/28               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,716 - DEBUG - Found interface data line: | ge100-0/0/28/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,716 - DEBUG - Found interface data line: | ge100-0/0/28/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,716 - DEBUG - Found interface data line: | ge400-0/0/29               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,716 - DEBUG - Found interface data line: | ge100-0/0/29/0             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,716 - DEBUG - Found interface data line: | ge100-0/0/29/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,717 - DEBUG - Found interface data line: | ge400-0/0/30               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,717 - DEBUG - Found interface data line: | ge100-0/0/30/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,717 - DEBUG - Found interface data line: | ge100-0/0/30/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,717 - DEBUG - Found interface data line: | ge400-0/0/31               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,717 - DEBUG - Found interface data line: | ge100-0/0/31/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,717 - DEBUG - Found interface data line: | ge100-0/0/31/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,718 - DEBUG - Found interface data line: | ge400-0/0/32               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,718 - DEBUG - Found interface data line: | ge100-0/0/32/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,718 - DEBUG - Found interface data line: | ge100-0/0/32/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,718 - DEBUG - Found interface data line: | ge400-0/0/33               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,718 - DEBUG - Found interface data line: | ge100-0/0/33/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,718 - DEBUG - Found interface data line: | ge100-0/0/33/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,719 - DEBUG - Found interface data line: | ge400-0/0/34               | disabled | not-present     |                        |                                             |               | 1514 |                                             |            |
+2025-09-07 19:34:35,719 - DEBUG - Found interface data line: | ge100-0/0/34/0             | enabled  | up              |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,719 - DEBUG - Found interface data line: | ge100-0/0/34/1             | enabled  | down            |                        |                                             |               | 1514 | VRF (default)                               |            |
+2025-09-07 19:34:35,719 - INFO - Parsing DRIVENETS tabular format with 94 interface lines
+2025-09-07 19:34:35,719 - DEBUG - Parsed tabular interface: bundle-1 -> {'interface_name': 'bundle-1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,719 - DEBUG - Parsed tabular interface: bundle-2 -> {'interface_name': 'bundle-2', 'admin_state': 'enabled', 'operational_state': 'up', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,720 - DEBUG - Parsed tabular interface: ge400-0/0/0 -> {'interface_name': 'ge400-0/0/0', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,720 - DEBUG - Parsed tabular interface: ge100-0/0/0/0 -> {'interface_name': 'ge100-0/0/0/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,720 - DEBUG - Parsed tabular interface: ge100-0/0/0/1 -> {'interface_name': 'ge100-0/0/0/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,720 - DEBUG - Parsed tabular interface: ge400-0/0/2 -> {'interface_name': 'ge400-0/0/2', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,721 - DEBUG - Parsed tabular interface: ge100-0/0/2/0 -> {'interface_name': 'ge100-0/0/2/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,721 - DEBUG - Parsed tabular interface: ge100-0/0/2/1 -> {'interface_name': 'ge100-0/0/2/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,721 - DEBUG - Parsed tabular interface: ge400-0/0/3 -> {'interface_name': 'ge400-0/0/3', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,721 - DEBUG - Parsed tabular interface: ge100-0/0/3/0 -> {'interface_name': 'ge100-0/0/3/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,722 - DEBUG - Parsed tabular interface: ge100-0/0/3/1 -> {'interface_name': 'ge100-0/0/3/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,722 - DEBUG - Parsed tabular interface: ge400-0/0/4 -> {'interface_name': 'ge400-0/0/4', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,722 - DEBUG - Parsed tabular interface: ge100-0/0/4/0 -> {'interface_name': 'ge100-0/0/4/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,722 - DEBUG - Parsed tabular interface: ge100-0/0/4/1 -> {'interface_name': 'ge100-0/0/4/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,722 - DEBUG - Parsed tabular interface: ge400-0/0/5 -> {'interface_name': 'ge400-0/0/5', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,722 - DEBUG - Parsed tabular interface: ge100-0/0/5/0 -> {'interface_name': 'ge100-0/0/5/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,723 - DEBUG - Parsed tabular interface: ge100-0/0/5/1 -> {'interface_name': 'ge100-0/0/5/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,723 - DEBUG - Parsed tabular interface: ge400-0/0/6 -> {'interface_name': 'ge400-0/0/6', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,723 - DEBUG - Parsed tabular interface: ge100-0/0/6/0 -> {'interface_name': 'ge100-0/0/6/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,723 - DEBUG - Parsed tabular interface: ge100-0/0/6/1 -> {'interface_name': 'ge100-0/0/6/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,723 - DEBUG - Parsed tabular interface: ge400-0/0/7 -> {'interface_name': 'ge400-0/0/7', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,723 - DEBUG - Parsed tabular interface: ge100-0/0/7/0 -> {'interface_name': 'ge100-0/0/7/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,723 - DEBUG - Parsed tabular interface: ge100-0/0/7/1 -> {'interface_name': 'ge100-0/0/7/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,724 - DEBUG - Parsed tabular interface: ge400-0/0/8 -> {'interface_name': 'ge400-0/0/8', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,724 - DEBUG - Parsed tabular interface: ge100-0/0/8/0 -> {'interface_name': 'ge100-0/0/8/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,724 - DEBUG - Parsed tabular interface: ge100-0/0/8/1 -> {'interface_name': 'ge100-0/0/8/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,724 - DEBUG - Parsed tabular interface: ge400-0/0/9 -> {'interface_name': 'ge400-0/0/9', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,725 - DEBUG - Parsed tabular interface: ge400-0/0/10 -> {'interface_name': 'ge400-0/0/10', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,725 - DEBUG - Parsed tabular interface: ge100-0/0/10/0 -> {'interface_name': 'ge100-0/0/10/0', 'admin_state': 'enabled', 'operational_state': 'up', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,726 - DEBUG - Parsed tabular interface: ge100-0/0/10/1 -> {'interface_name': 'ge100-0/0/10/1', 'admin_state': 'enabled', 'operational_state': 'up', 'bundle': '2', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,726 - DEBUG - Parsed tabular interface: ge400-0/0/11 -> {'interface_name': 'ge400-0/0/11', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,726 - DEBUG - Parsed tabular interface: ge100-0/0/11/0 -> {'interface_name': 'ge100-0/0/11/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,726 - DEBUG - Parsed tabular interface: ge100-0/0/11/1 -> {'interface_name': 'ge100-0/0/11/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,727 - DEBUG - Parsed tabular interface: ge400-0/0/12 -> {'interface_name': 'ge400-0/0/12', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,727 - DEBUG - Parsed tabular interface: ge100-0/0/12/0 -> {'interface_name': 'ge100-0/0/12/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,727 - DEBUG - Parsed tabular interface: ge100-0/0/12/1 -> {'interface_name': 'ge100-0/0/12/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,727 - DEBUG - Parsed tabular interface: ge400-0/0/13 -> {'interface_name': 'ge400-0/0/13', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,727 - DEBUG - Parsed tabular interface: ge100-0/0/13/0 -> {'interface_name': 'ge100-0/0/13/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,727 - DEBUG - Parsed tabular interface: ge100-0/0/13/1 -> {'interface_name': 'ge100-0/0/13/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,728 - DEBUG - Parsed tabular interface: ge400-0/0/14 -> {'interface_name': 'ge400-0/0/14', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,728 - DEBUG - Parsed tabular interface: ge100-0/0/14/0 -> {'interface_name': 'ge100-0/0/14/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,728 - DEBUG - Parsed tabular interface: ge100-0/0/14/1 -> {'interface_name': 'ge100-0/0/14/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,728 - DEBUG - Parsed tabular interface: ge400-0/0/15 -> {'interface_name': 'ge400-0/0/15', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,728 - DEBUG - Parsed tabular interface: ge100-0/0/15/0 -> {'interface_name': 'ge100-0/0/15/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,728 - DEBUG - Parsed tabular interface: ge100-0/0/15/1 -> {'interface_name': 'ge100-0/0/15/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,728 - DEBUG - Parsed tabular interface: ge400-0/0/16 -> {'interface_name': 'ge400-0/0/16', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,729 - DEBUG - Parsed tabular interface: ge100-0/0/16/0 -> {'interface_name': 'ge100-0/0/16/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,729 - DEBUG - Parsed tabular interface: ge100-0/0/16/1 -> {'interface_name': 'ge100-0/0/16/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,729 - DEBUG - Parsed tabular interface: ge400-0/0/18 -> {'interface_name': 'ge400-0/0/18', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,729 - DEBUG - Parsed tabular interface: ge100-0/0/18/0 -> {'interface_name': 'ge100-0/0/18/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,729 - DEBUG - Parsed tabular interface: ge100-0/0/18/1 -> {'interface_name': 'ge100-0/0/18/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,730 - DEBUG - Parsed tabular interface: ge400-0/0/20 -> {'interface_name': 'ge400-0/0/20', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,730 - DEBUG - Parsed tabular interface: ge100-0/0/20/0 -> {'interface_name': 'ge100-0/0/20/0', 'admin_state': 'enabled', 'operational_state': 'up', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,730 - DEBUG - Parsed tabular interface: ge100-0/0/20/1 -> {'interface_name': 'ge100-0/0/20/1', 'admin_state': 'enabled', 'operational_state': 'up', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,732 - DEBUG - Parsed tabular interface: ge400-0/0/21 -> {'interface_name': 'ge400-0/0/21', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,732 - DEBUG - Parsed tabular interface: ge400-0/0/22 -> {'interface_name': 'ge400-0/0/22', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,732 - DEBUG - Parsed tabular interface: ge100-0/0/22/0 -> {'interface_name': 'ge100-0/0/22/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,732 - DEBUG - Parsed tabular interface: ge100-0/0/22/1 -> {'interface_name': 'ge100-0/0/22/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,732 - DEBUG - Parsed tabular interface: ge400-0/0/23 -> {'interface_name': 'ge400-0/0/23', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,732 - DEBUG - Parsed tabular interface: ge100-0/0/23/0 -> {'interface_name': 'ge100-0/0/23/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,733 - DEBUG - Parsed tabular interface: ge100-0/0/23/1 -> {'interface_name': 'ge100-0/0/23/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,733 - DEBUG - Parsed tabular interface: ge400-0/0/24 -> {'interface_name': 'ge400-0/0/24', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,733 - DEBUG - Parsed tabular interface: ge100-0/0/24/0 -> {'interface_name': 'ge100-0/0/24/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,733 - DEBUG - Parsed tabular interface: ge100-0/0/24/1 -> {'interface_name': 'ge100-0/0/24/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,733 - DEBUG - Parsed tabular interface: ge400-0/0/25 -> {'interface_name': 'ge400-0/0/25', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,733 - DEBUG - Parsed tabular interface: ge100-0/0/25/0 -> {'interface_name': 'ge100-0/0/25/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,733 - DEBUG - Parsed tabular interface: ge100-0/0/25/1 -> {'interface_name': 'ge100-0/0/25/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,734 - DEBUG - Parsed tabular interface: ge400-0/0/26 -> {'interface_name': 'ge400-0/0/26', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,734 - DEBUG - Parsed tabular interface: ge100-0/0/26/0 -> {'interface_name': 'ge100-0/0/26/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,734 - DEBUG - Parsed tabular interface: ge100-0/0/26/1 -> {'interface_name': 'ge100-0/0/26/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,734 - DEBUG - Parsed tabular interface: ge400-0/0/27 -> {'interface_name': 'ge400-0/0/27', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,734 - DEBUG - Parsed tabular interface: ge100-0/0/27/0 -> {'interface_name': 'ge100-0/0/27/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,735 - DEBUG - Parsed tabular interface: ge100-0/0/27/1 -> {'interface_name': 'ge100-0/0/27/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,735 - DEBUG - Parsed tabular interface: ge400-0/0/28 -> {'interface_name': 'ge400-0/0/28', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,735 - DEBUG - Parsed tabular interface: ge100-0/0/28/0 -> {'interface_name': 'ge100-0/0/28/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,735 - DEBUG - Parsed tabular interface: ge100-0/0/28/1 -> {'interface_name': 'ge100-0/0/28/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,735 - DEBUG - Parsed tabular interface: ge400-0/0/29 -> {'interface_name': 'ge400-0/0/29', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,736 - DEBUG - Parsed tabular interface: ge100-0/0/29/0 -> {'interface_name': 'ge100-0/0/29/0', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,736 - DEBUG - Parsed tabular interface: ge100-0/0/29/1 -> {'interface_name': 'ge100-0/0/29/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,736 - DEBUG - Parsed tabular interface: ge400-0/0/30 -> {'interface_name': 'ge400-0/0/30', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,736 - DEBUG - Parsed tabular interface: ge100-0/0/30/0 -> {'interface_name': 'ge100-0/0/30/0', 'admin_state': 'enabled', 'operational_state': 'up', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,736 - DEBUG - Parsed tabular interface: ge100-0/0/30/1 -> {'interface_name': 'ge100-0/0/30/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,737 - DEBUG - Parsed tabular interface: ge400-0/0/31 -> {'interface_name': 'ge400-0/0/31', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,737 - DEBUG - Parsed tabular interface: ge100-0/0/31/0 -> {'interface_name': 'ge100-0/0/31/0', 'admin_state': 'enabled', 'operational_state': 'up', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,737 - DEBUG - Parsed tabular interface: ge100-0/0/31/1 -> {'interface_name': 'ge100-0/0/31/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,737 - DEBUG - Parsed tabular interface: ge400-0/0/32 -> {'interface_name': 'ge400-0/0/32', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,737 - DEBUG - Parsed tabular interface: ge100-0/0/32/0 -> {'interface_name': 'ge100-0/0/32/0', 'admin_state': 'enabled', 'operational_state': 'up', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,737 - DEBUG - Parsed tabular interface: ge100-0/0/32/1 -> {'interface_name': 'ge100-0/0/32/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,737 - DEBUG - Parsed tabular interface: ge400-0/0/33 -> {'interface_name': 'ge400-0/0/33', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,738 - DEBUG - Parsed tabular interface: ge100-0/0/33/0 -> {'interface_name': 'ge100-0/0/33/0', 'admin_state': 'enabled', 'operational_state': 'up', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,738 - DEBUG - Parsed tabular interface: ge100-0/0/33/1 -> {'interface_name': 'ge100-0/0/33/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,738 - DEBUG - Parsed tabular interface: ge400-0/0/34 -> {'interface_name': 'ge400-0/0/34', 'admin_state': 'disabled', 'operational_state': 'not-present', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': '', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,738 - DEBUG - Parsed tabular interface: ge100-0/0/34/0 -> {'interface_name': 'ge100-0/0/34/0', 'admin_state': 'enabled', 'operational_state': 'up', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,738 - DEBUG - Parsed tabular interface: ge100-0/0/34/1 -> {'interface_name': 'ge100-0/0/34/1', 'admin_state': 'enabled', 'operational_state': 'down', 'bundle': '', 'mtu': '1514', 'vlan': '', 'vrf': 'VRF (default)', 'ipv4': [], 'ipv6': []}
+2025-09-07 19:34:35,740 - INFO - DRIVENETS interface information saved to Devices/NEW-NCP3/NEW-NCP3_interfaces.json
+2025-09-07 19:34:35,741 - INFO - Total interfaces found: 94
+2025-09-07 19:34:35,741 - INFO - === Stage 3: Collecting LLDP neighbor information ===
+2025-09-07 19:34:35,741 - INFO - Executing LLDP command: show lldp neighbors | no-more
+2025-09-07 19:34:39,746 - DEBUG - LLDP command completed - detected prompt: 'NEW-NCP3#'
+2025-09-07 19:34:39,746 - INFO - Parsing LLDP neighbor information
+2025-09-07 19:34:39,747 - DEBUG - Found LLDP table header at line 2: | Interface      | Neighbor System Name       | Neighbor interface   | Neighbor TTL   |
+2025-09-07 19:34:39,747 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/0/0
+2025-09-07 19:34:39,747 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/0/1
+2025-09-07 19:34:39,747 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/2/0
+2025-09-07 19:34:39,747 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/2/1
+2025-09-07 19:34:39,748 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/3/0
+2025-09-07 19:34:39,748 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/3/1
+2025-09-07 19:34:39,748 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/4/0
+2025-09-07 19:34:39,748 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/4/1
+2025-09-07 19:34:39,748 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/5/0
+2025-09-07 19:34:39,748 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/5/1
+2025-09-07 19:34:39,749 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/6/0
+2025-09-07 19:34:39,749 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/6/1
+2025-09-07 19:34:39,749 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/7/0
+2025-09-07 19:34:39,749 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/7/1
+2025-09-07 19:34:39,749 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/8/0
+2025-09-07 19:34:39,749 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/8/1
+2025-09-07 19:34:39,749 - DEBUG - LLDP connection: ge100-0/0/10/0 -> NEW-NCP3:ge100-0/0/20/0
+2025-09-07 19:34:39,750 - DEBUG - LLDP connection: ge100-0/0/10/1 -> NEW-NCP3:ge100-0/0/20/1
+2025-09-07 19:34:39,750 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/11/0
+2025-09-07 19:34:39,750 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/11/1
+2025-09-07 19:34:39,750 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/12/0
+2025-09-07 19:34:39,751 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/12/1
+2025-09-07 19:34:39,751 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/13/0
+2025-09-07 19:34:39,751 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/13/1
+2025-09-07 19:34:39,751 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/14/0
+2025-09-07 19:34:39,751 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/14/1
+2025-09-07 19:34:39,752 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/15/0
+2025-09-07 19:34:39,752 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/15/1
+2025-09-07 19:34:39,752 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/16/0
+2025-09-07 19:34:39,753 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/16/1
+2025-09-07 19:34:39,753 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/18/0
+2025-09-07 19:34:39,753 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/18/1
+2025-09-07 19:34:39,753 - DEBUG - LLDP connection: ge100-0/0/20/0 -> NEW-NCP3:ge100-0/0/10/0
+2025-09-07 19:34:39,753 - DEBUG - LLDP connection: ge100-0/0/20/1 -> NEW-NCP3:ge100-0/0/10/1
+2025-09-07 19:34:39,753 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/22/0
+2025-09-07 19:34:39,753 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/22/1
+2025-09-07 19:34:39,754 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/23/0
+2025-09-07 19:34:39,754 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/23/1
+2025-09-07 19:34:39,754 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/24/0
+2025-09-07 19:34:39,754 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/24/1
+2025-09-07 19:34:39,754 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/25/0
+2025-09-07 19:34:39,754 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/25/1
+2025-09-07 19:34:39,754 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/26/0
+2025-09-07 19:34:39,755 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/26/1
+2025-09-07 19:34:39,755 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/27/0
+2025-09-07 19:34:39,755 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/27/1
+2025-09-07 19:34:39,755 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/28/0
+2025-09-07 19:34:39,755 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/28/1
+2025-09-07 19:34:39,756 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/29/0
+2025-09-07 19:34:39,756 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/29/1
+2025-09-07 19:34:39,756 - DEBUG - LLDP connection: ge100-0/0/30/0 -> DN-LEAF1.dev.drivenets.net:Ethernet6/17/1
+2025-09-07 19:34:39,757 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/30/1
+2025-09-07 19:34:39,757 - DEBUG - LLDP connection: ge100-0/0/31/0 -> DN-LEAF1.dev.drivenets.net:Ethernet6/18/1
+2025-09-07 19:34:39,757 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/31/1
+2025-09-07 19:34:39,757 - DEBUG - LLDP connection: ge100-0/0/32/0 -> DN-LEAF1.dev.drivenets.net:Ethernet6/19/1
+2025-09-07 19:34:39,758 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/32/1
+2025-09-07 19:34:39,758 - DEBUG - LLDP connection: ge100-0/0/33/0 -> DN-LEAF1.dev.drivenets.net:Ethernet6/20/1
+2025-09-07 19:34:39,758 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/33/1
+2025-09-07 19:34:39,758 - DEBUG - LLDP connection: ge100-0/0/34/0 -> DN-LEAF1.dev.drivenets.net:Ethernet6/21/1
+2025-09-07 19:34:39,758 - DEBUG - LLDP interface with no neighbor (skipped): ge100-0/0/34/1
+2025-09-07 19:34:39,758 - INFO - LLDP information saved to Devices/NEW-NCP3/NEW-NCP3_LLDP_Connections.json
+2025-09-07 19:34:39,758 - INFO - Total active LLDP connections: 9
+2025-09-07 19:34:39,758 - INFO - Connected neighbors: 9
+2025-09-07 19:34:39,758 - INFO - === Stage 4: Validating saved data ===
+2025-09-07 19:34:39,759 - DEBUG - Saving and uploading configuration for NEW-NCP3
+2025-09-07 19:34:39,759 - INFO - Starting configuration save and upload for NEW-NCP3
+2025-09-07 19:34:39,759 - DEBUG - Entering configuration mode
+2025-09-07 19:34:39,759 - INFO - Executing command: configure
+2025-09-07 19:34:41,761 - DEBUG - Command completed - detected prompt: 'NEW-NCP3(cfg)#'
+2025-09-07 19:34:41,761 - DEBUG - Saving configuration as NEW-NCP3_config
+2025-09-07 19:34:41,761 - INFO - Executing command: save NEW-NCP3_config
+2025-09-07 19:34:43,764 - DEBUG - Command completed - detected prompt: 'NEW-NCP3(cfg)#'
+2025-09-07 19:34:43,764 - INFO - Configuration saved successfully on device
+2025-09-07 19:34:43,764 - DEBUG - Uploading configuration with command: request file upload config NEW-NCP3_config /home/dn/Eddie-scripts/monitorAPP/Devices/NEW-NCP3 out-of-band
+2025-09-07 19:34:43,764 - INFO - Executing command: request file upload config NEW-NCP3_config /home/dn/Eddie-scripts/monitorAPP/Devices/NEW-NCP3 out-of-band
+2025-09-07 19:34:45,764 - DEBUG - Command completed - detected prompt: '\x1b[0mNEW-NCP3(cfg)#'
+2025-09-07 19:34:45,765 - WARNING - Configuration upload may have failed: request file upload config NEW-NCP3_config /home/dn/Eddie-scripts/monitorAPP/Devices/NEW-NCP3 out-of-band
+ERROR: Invalid remote location.
+[0mNEW-NCP3(cfg)# 
+2025-09-07 19:34:45,765 - INFO - Executing command: top
+2025-09-07 19:34:47,767 - DEBUG - Command completed - detected prompt: 'NEW-NCP3(cfg)#'
+2025-09-07 19:34:47,768 - INFO - Device configuration saved and uploaded successfully
+2025-09-07 19:34:47,768 - INFO - === Starting Data Validation ===
+2025-09-07 19:34:47,769 - INFO - Validating interface data: 94 interfaces
+2025-09-07 19:34:47,769 - INFO - Querying device for fresh interface data...
+2025-09-07 19:34:47,769 - INFO - Executing command: show interfaces | no-more
+2025-09-07 19:34:52,274 - DEBUG - Command completed - detected prompt: 'NEW-NCP3(cfg)#'
+2025-09-07 19:34:52,275 - DEBUG - Fresh full parse found 94 interfaces
+2025-09-07 19:34:52,275 - INFO - Performing final validation check...
+2025-09-07 19:34:52,276 - INFO - Corrective validation passed - perfect match
+2025-09-07 19:34:52,276 - INFO - Validating system information data...
+2025-09-07 19:34:52,276 - INFO - Executing command: show system | no-more
+2025-09-07 19:34:54,278 - DEBUG - Command completed - detected prompt: 'NEW-NCP3(cfg)#'
+2025-09-07 19:34:54,279 - INFO - System data validation passed - device name consistent
+2025-09-07 19:34:54,279 - INFO - Validating LLDP data: 9 active connections
+2025-09-07 19:34:54,280 - INFO - Querying device for fresh LLDP data...
+2025-09-07 19:34:54,280 - INFO - Executing LLDP command: show lldp neighbors | no-more
+2025-09-07 19:34:58,284 - DEBUG - LLDP command completed - detected prompt: 'NEW-NCP3(cfg)#'
+2025-09-07 19:34:58,284 - WARNING - LLDP data validation found discrepancies
+2025-09-07 19:34:58,285 - WARNING - Missing LLDP interface: ge100-0/0/0/0
+2025-09-07 19:34:58,285 - WARNING - Missing LLDP interface: ge100-0/0/0/1
+2025-09-07 19:34:58,285 - WARNING - Missing LLDP interface: ge100-0/0/2/0
+2025-09-07 19:34:58,285 - WARNING - Missing LLDP interface: ge100-0/0/2/1
+2025-09-07 19:34:58,285 - WARNING - Missing LLDP interface: ge100-0/0/3/0
+2025-09-07 19:34:58,285 - WARNING - Missing LLDP interface: ge100-0/0/3/1
+2025-09-07 19:34:58,285 - WARNING - Missing LLDP interface: ge100-0/0/4/0
+2025-09-07 19:34:58,285 - WARNING - Missing LLDP interface: ge100-0/0/4/1
+2025-09-07 19:34:58,285 - WARNING - Missing LLDP interface: ge100-0/0/5/0
+2025-09-07 19:34:58,285 - WARNING - Missing LLDP interface: ge100-0/0/5/1
+2025-09-07 19:34:58,286 - WARNING - Missing LLDP interface: ge100-0/0/6/0
+2025-09-07 19:34:58,286 - WARNING - Missing LLDP interface: ge100-0/0/6/1
+2025-09-07 19:34:58,286 - WARNING - Missing LLDP interface: ge100-0/0/7/0
+2025-09-07 19:34:58,286 - WARNING - Missing LLDP interface: ge100-0/0/7/1
+2025-09-07 19:34:58,286 - WARNING - Missing LLDP interface: ge100-0/0/8/0
+2025-09-07 19:34:58,286 - WARNING - Missing LLDP interface: ge100-0/0/8/1
+2025-09-07 19:34:58,286 - WARNING - Missing LLDP interface: ge100-0/0/11/0
+2025-09-07 19:34:58,286 - WARNING - Missing LLDP interface: ge100-0/0/11/1
+2025-09-07 19:34:58,286 - WARNING - Missing LLDP interface: ge100-0/0/12/0
+2025-09-07 19:34:58,286 - WARNING - Missing LLDP interface: ge100-0/0/12/1
+2025-09-07 19:34:58,287 - WARNING - Missing LLDP interface: ge100-0/0/13/0
+2025-09-07 19:34:58,287 - WARNING - Missing LLDP interface: ge100-0/0/13/1
+2025-09-07 19:34:58,287 - WARNING - Missing LLDP interface: ge100-0/0/14/0
+2025-09-07 19:34:58,287 - WARNING - Missing LLDP interface: ge100-0/0/14/1
+2025-09-07 19:34:58,287 - WARNING - Missing LLDP interface: ge100-0/0/15/0
+2025-09-07 19:34:58,287 - WARNING - Missing LLDP interface: ge100-0/0/15/1
+2025-09-07 19:34:58,287 - WARNING - Missing LLDP interface: ge100-0/0/16/0
+2025-09-07 19:34:58,287 - WARNING - Missing LLDP interface: ge100-0/0/16/1
+2025-09-07 19:34:58,287 - WARNING - Missing LLDP interface: ge100-0/0/18/0
+2025-09-07 19:34:58,287 - WARNING - Missing LLDP interface: ge100-0/0/18/1
+2025-09-07 19:34:58,288 - WARNING - Missing LLDP interface: ge100-0/0/22/0
+2025-09-07 19:34:58,288 - WARNING - Missing LLDP interface: ge100-0/0/22/1
+2025-09-07 19:34:58,288 - WARNING - Missing LLDP interface: ge100-0/0/23/0
+2025-09-07 19:34:58,288 - WARNING - Missing LLDP interface: ge100-0/0/23/1
+2025-09-07 19:34:58,288 - WARNING - Missing LLDP interface: ge100-0/0/24/0
+2025-09-07 19:34:58,288 - WARNING - Missing LLDP interface: ge100-0/0/24/1
+2025-09-07 19:34:58,288 - WARNING - Missing LLDP interface: ge100-0/0/25/0
+2025-09-07 19:34:58,288 - WARNING - Missing LLDP interface: ge100-0/0/25/1
+2025-09-07 19:34:58,288 - WARNING - Missing LLDP interface: ge100-0/0/26/0
+2025-09-07 19:34:58,288 - WARNING - Missing LLDP interface: ge100-0/0/26/1
+2025-09-07 19:34:58,289 - WARNING - Missing LLDP interface: ge100-0/0/27/0
+2025-09-07 19:34:58,289 - WARNING - Missing LLDP interface: ge100-0/0/27/1
+2025-09-07 19:34:58,289 - WARNING - Missing LLDP interface: ge100-0/0/28/0
+2025-09-07 19:34:58,289 - WARNING - Missing LLDP interface: ge100-0/0/28/1
+2025-09-07 19:34:58,289 - WARNING - Missing LLDP interface: ge100-0/0/29/0
+2025-09-07 19:34:58,289 - WARNING - Missing LLDP interface: ge100-0/0/29/1
+2025-09-07 19:34:58,289 - WARNING - Missing LLDP interface: ge100-0/0/30/1
+2025-09-07 19:34:58,289 - WARNING - Missing LLDP interface: ge100-0/0/31/1
+2025-09-07 19:34:58,290 - WARNING - Missing LLDP interface: ge100-0/0/32/1
+2025-09-07 19:34:58,290 - WARNING - Missing LLDP interface: ge100-0/0/33/1
+2025-09-07 19:34:58,290 - WARNING - Missing LLDP interface: ge100-0/0/34/1
+2025-09-07 19:34:58,290 - INFO - Network mapping completed successfully
+2025-09-07 19:34:58,290 - DEBUG - [chan 0] EOF sent (0)
+2025-09-07 19:34:58,291 - INFO - Disconnected from device

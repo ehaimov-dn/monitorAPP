@@ -571,6 +571,7 @@ class InterfaceEnabler:
                 print("✅ Retrieved updated interface information")
                 print("✅ Retrieved detailed interface information")
                 print("✅ Retrieved updated LLDP information")
+                print("✅ Saved and uploaded device configuration")
                 print("✅ Device data updated successfully")
                 print(f"✅ Updated JSON files in: Devices/{device_name}/")
                 return True

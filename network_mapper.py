@@ -423,29 +423,33 @@ class NetworkMapper:
             self.logger.error(f"Error executing command: {str(e)}")
             return ""
             
-    def parse_system_information(self, output, credentials):
+    def parse_system_information(self, output, credentials, existing_device_name=None):
         """Parse 'show system | no-more' output and save to JSON"""
         self.logger.info("Parsing system information")
         
-        # Extract device name from output
-        device_name = "unknown_device"
-        device_name_match = re.search(r'Host-name\s*:\s*(\S+)', output, re.IGNORECASE)
-        if device_name_match:
-            device_name = device_name_match.group(1)
+        # Use existing device name if provided, otherwise extract from output
+        if existing_device_name:
+            device_name = existing_device_name
         else:
-            # Try alternative patterns including DRIVENETS format
-            hostname_patterns = [
-                r'hostname\s+(\S+)',
-                r'System\s+Name\s*:\s*([^,\r\n]+)',  # DRIVENETS: "System Name: R1_CL16_Eddie, System-Id:"
-                r'Device\s+Name\s*:\s*(\S+)'
-            ]
-            for pattern in hostname_patterns:
-                match = re.search(pattern, output, re.IGNORECASE)
-                if match:
-                    device_name = match.group(1).strip()
-                    # Remove any trailing comma or whitespace
-                    device_name = device_name.rstrip(' ,')
-                    break
+            # Extract device name from output
+            device_name = "unknown_device"
+            device_name_match = re.search(r'Host-name\s*:\s*(\S+)', output, re.IGNORECASE)
+            if device_name_match:
+                device_name = device_name_match.group(1)
+            else:
+                # Try alternative patterns including DRIVENETS format
+                hostname_patterns = [
+                    r'hostname\s+(\S+)',
+                    r'System\s+Name\s*:\s*([^,\r\n]+)',  # DRIVENETS: "System Name: R1_CL16_Eddie, System-Id:"
+                    r'Device\s+Name\s*:\s*(\S+)'
+                ]
+                for pattern in hostname_patterns:
+                    match = re.search(pattern, output, re.IGNORECASE)
+                    if match:
+                        device_name = match.group(1).strip()
+                        # Remove any trailing comma or whitespace
+                        device_name = device_name.rstrip(' ,')
+                        break
         
         # Extract device serial number for directory structure
         device_serial = "unknown_serial"
@@ -1276,6 +1280,90 @@ class NetworkMapper:
                 elif 'Last cleared:' in part:
                     parsed_fields['last_cleared'] = part.replace('Last cleared:', '').strip()
         
+    def save_and_upload_config(self, device_name):
+        """Save device configuration and upload it to the server"""
+        try:
+            self.logger.info(f"Starting configuration save and upload for {device_name}")
+            
+            # Step 1: Enter configuration mode
+            self.logger.debug("Entering configuration mode")
+            config_output = self.execute_command("configure")
+            if not config_output:
+                self.logger.error("Failed to enter configuration mode")
+                return False
+            
+            # Step 2: Save configuration with device name
+            config_filename = f"{device_name}_config"
+            self.logger.debug(f"Saving configuration as {config_filename}")
+            save_output = self.execute_command(f"save {config_filename}")
+            
+            if not save_output:
+                self.logger.error("Failed to save configuration")
+                return False
+            
+            # Check if save was successful
+            if any(error in save_output.lower() for error in ['error', 'failed', 'invalid']):
+                self.logger.error(f"Configuration save failed: {save_output}")
+                return False
+            
+            self.logger.info("Configuration saved successfully on device")
+            
+            # Step 3: Upload configuration file to server
+            device_dir = f"/home/dn/Eddie-scripts/monitorAPP/Devices/{device_name}"
+            upload_command = f"request file upload config {config_filename} dn@192.168.166.142:{device_dir} out-of-band"
+            
+            self.logger.debug(f"Uploading configuration with command: {upload_command}")
+            
+            # Clear any pending data
+            if self.channel.recv_ready():
+                self.channel.recv(4096)
+            
+            # Send upload command
+            self.channel.send(upload_command + '\n')
+            time.sleep(2)
+            
+            # Collect output and handle password prompt
+            upload_output = ""
+            max_wait = 60
+            start_time = time.time()
+            password_sent = False
+            
+            while time.time() - start_time < max_wait:
+                if self.channel.recv_ready():
+                    chunk = self.channel.recv(4096).decode('utf-8', errors='ignore')
+                    upload_output += chunk
+                    
+                    # Check for password prompt
+                    if "password:" in upload_output.lower() and not password_sent:
+                        self.logger.info("Upload password prompt detected - sending password")
+                        self.channel.send('drive1234!\n')
+                        password_sent = True
+                        time.sleep(2)
+                        continue
+                    
+                    # Check for completion
+                    if any(line.strip().endswith(p) for line in upload_output.split('\n')[-3:] 
+                           for p in ['>', '#', '$', '% ']):
+                        break
+                else:
+                    time.sleep(0.5)
+            
+            # Check if upload was successful
+            if any(error in upload_output.lower() for error in ['error', 'failed', 'invalid']):
+                self.logger.warning(f"Configuration upload may have failed: {upload_output}")
+                # Don't return False here as the save was successful
+            else:
+                self.logger.info("Configuration uploaded successfully to server")
+            
+            # Exit configuration mode
+            self.execute_command("top")
+            
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Failed to save and upload configuration: {str(e)}")
+            return False
+        
     def validate_saved_data(self, device_name):
         """Validate saved JSON data against fresh device query"""
         self.logger.info("=== Starting Data Validation ===")
@@ -1808,6 +1896,13 @@ class NetworkMapper:
             if lldp_output:
                 self.parse_lldp_information(lldp_output, device_name)
             
+            # Save and upload device configuration
+            self.logger.debug(f"Saving and uploading configuration for {device_name}")
+            if self.save_and_upload_config(device_name):
+                self.logger.info("Device configuration saved and uploaded successfully")
+            else:
+                self.logger.warning("Failed to save and upload device configuration")
+            
             self.logger.info(f"Monitoring cycle completed for {device_name}")
             return True
             
@@ -1859,18 +1954,20 @@ class NetworkMapper:
                 print("3. Try connecting manually with SSH to verify device accessibility")
                 return False
             
-            # Stage 2: Execute system information command (only for new devices)
+            # Stage 1: Collect system information (for both new and existing devices)
+            self.logger.info("=== Stage 1: Collecting system information ===")
+            system_output = self.execute_command("show system | no-more")
+            
+            if not system_output:
+                self.logger.error("Failed to get system information")
+                return False
+            
             if device_choice == "new":
-                self.logger.info("=== Stage 1: Collecting system information ===")
-                system_output = self.execute_command("show system | no-more")
-                
-                if not system_output:
-                    self.logger.error("Failed to get system information")
-                    return False
-                    
                 device_name = self.parse_system_information(system_output, credentials)
             else:
                 device_name = selected_device
+                # Update system information for existing devices too
+                self.parse_system_information(system_output, credentials, device_name)
             
             # Stage 3: Execute interface information command
             self.logger.info("=== Stage 2: Collecting interface information ===")
@@ -1896,8 +1993,18 @@ class NetworkMapper:
                 
             self.parse_interface_information(interface_output, device_name)
             
-            # Stage 3: Execute LLDP neighbors command
-            self.logger.info("=== Stage 3: Collecting LLDP neighbor information ===")
+            # Stage 3: Collect detailed interface information
+            self.logger.info("=== Stage 3: Collecting detailed interface information ===")
+            self.logger.debug(f"Collecting detailed interface information for {device_name}")
+            detailed_interface_output = self.execute_command("show interfaces detail | no-more")
+            
+            if detailed_interface_output:
+                self.parse_detailed_interface_information(detailed_interface_output, device_name)
+            else:
+                self.logger.warning(f"Failed to get detailed interface information for {device_name}")
+            
+            # Stage 4: Execute LLDP neighbors command
+            self.logger.info("=== Stage 4: Collecting LLDP neighbor information ===")
             lldp_output = self.execute_lldp_command("show lldp neighbors | no-more")
             
             if not lldp_output:
@@ -1909,8 +2016,17 @@ class NetworkMapper:
             else:
                 self.parse_lldp_information(lldp_output, device_name)
             
-            # Stage 4: Validate saved data against device
-            self.logger.info("=== Stage 4: Validating saved data ===")
+            # Stage 5: Save and upload device configuration
+            self.logger.info("=== Stage 5: Saving and uploading device configuration ===")
+            self.logger.debug(f"Saving and uploading configuration for {device_name}")
+            if self.save_and_upload_config(device_name):
+                self.logger.info("Device configuration saved and uploaded successfully")
+            else:
+                self.logger.warning("Failed to save and upload device configuration")
+            
+            # Stage 6: Validate saved data against device
+            self.logger.info("=== Stage 6: Validating saved data ===")
+            
             validation_passed = self.validate_saved_data(device_name)
             
             self.logger.info("Network mapping completed successfully")
@@ -1921,7 +2037,9 @@ class NetworkMapper:
             print(f"Files saved to directory: {device_dir}/")
             print(f"System info saved to: {device_dir}/{device_name}_System_Information.json")
             print(f"Interface info saved to: {device_dir}/{device_name}_interfaces.json")
+            print(f"Interface detail saved to: {device_dir}/{device_name}_interfaces_detail.json")
             print(f"LLDP info saved to: {device_dir}/{device_name}_LLDP_Connections.json")
+            print(f"Configuration backup saved to: {device_dir}/{device_name}_config")
             print(f"Total interfaces: {len(self.interfaces_data.get('interfaces', {}))}")
             
             # Handle LLDP data display

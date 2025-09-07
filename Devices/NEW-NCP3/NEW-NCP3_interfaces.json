@@ -1,7 +1,7 @@
 {
   "device_name": "NEW-NCP3",
-  "timestamp": "2025-09-07T18:27:23.853496",
-  "total_interfaces": 98,
+  "timestamp": "2025-09-07T19:46:19.570942",
+  "total_interfaces": 94,
   "interfaces": {
     "bundle-1": {
       "interface_name": "bundle-1",
@@ -17,7 +17,7 @@
     "bundle-2": {
       "interface_name": "bundle-2",
       "admin_state": "enabled",
-      "operational_state": "down",
+      "operational_state": "up",
       "bundle": "",
       "mtu": "1514",
       "vlan": "",
@@ -291,30 +291,8 @@
     },
     "ge400-0/0/9": {
       "interface_name": "ge400-0/0/9",
-      "admin_state": "disabled",
-      "operational_state": "not-present",
-      "bundle": "",
-      "mtu": "1514",
-      "vlan": "",
-      "vrf": "",
-      "ipv4": [],
-      "ipv6": []
-    },
-    "ge100-0/0/9/0": {
-      "interface_name": "ge100-0/0/9/0",
       "admin_state": "enabled",
-      "operational_state": "up",
-      "bundle": "",
-      "mtu": "1514",
-      "vlan": "",
-      "vrf": "VRF (default)",
-      "ipv4": [],
-      "ipv6": []
-    },
-    "ge100-0/0/9/1": {
-      "interface_name": "ge100-0/0/9/1",
-      "admin_state": "enabled",
-      "operational_state": "up",
+      "operational_state": "down",
       "bundle": "",
       "mtu": "1514",
       "vlan": "",
@@ -348,7 +326,7 @@
       "interface_name": "ge100-0/0/10/1",
       "admin_state": "enabled",
       "operational_state": "up",
-      "bundle": "",
+      "bundle": "2",
       "mtu": "1514",
       "vlan": "",
       "vrf": "VRF (default)",
@@ -567,7 +545,7 @@
     "ge100-0/0/18/0": {
       "interface_name": "ge100-0/0/18/0",
       "admin_state": "enabled",
-      "operational_state": "up",
+      "operational_state": "down",
       "bundle": "",
       "mtu": "1514",
       "vlan": "",
@@ -578,7 +556,7 @@
     "ge100-0/0/18/1": {
       "interface_name": "ge100-0/0/18/1",
       "admin_state": "enabled",
-      "operational_state": "up",
+      "operational_state": "down",
       "bundle": "",
       "mtu": "1514",
       "vlan": "",
@@ -621,28 +599,6 @@
     },
     "ge400-0/0/21": {
       "interface_name": "ge400-0/0/21",
-      "admin_state": "disabled",
-      "operational_state": "not-present",
-      "bundle": "",
-      "mtu": "1514",
-      "vlan": "",
-      "vrf": "",
-      "ipv4": [],
-      "ipv6": []
-    },
-    "ge100-0/0/21/0": {
-      "interface_name": "ge100-0/0/21/0",
-      "admin_state": "enabled",
-      "operational_state": "down",
-      "bundle": "",
-      "mtu": "1514",
-      "vlan": "",
-      "vrf": "VRF (default)",
-      "ipv4": [],
-      "ipv6": []
-    },
-    "ge100-0/0/21/1": {
-      "interface_name": "ge100-0/0/21/1",
       "admin_state": "enabled",
       "operational_state": "down",
       "bundle": "",

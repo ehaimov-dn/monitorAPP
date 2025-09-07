@@ -5,11 +5,11 @@
     "username": "dnroot",
     "password": "dnroot"
   },
-  "system_output": "show system | no-more\r\n\r\nSystem Name: NEW-NCP3, System-Id: b5f98f30-f5e0-405e-9119-a9e27a814e90\r\nSystem Type: SA-36CD-S-SA, Family: NCR\r\nEnterprise-Id: 49739\r\nDescription: DRIVENETS Network Cloud Router\r\nSystem status: running \r\nSystem Start Time: 07-Sep-2025 10:03:59 UTC\r\nSystem Uptime: 0 days, 2:04:25\r\nSystem Boot Uptime: 0 days, 2:05:20\r\nVersion: DNOS [25.4.0] build [41_priv], Copyright 2025 DRIVENETS LTD.\r\nPatch: N/A\r\nEnvironment:\r\n\tLocation: N/A\r\n\tFloor: N/A\r\n\tRack: N/A\r\nContact: support@drivenets.com\r\nFabric Minimum Links: N/A\r\nFabric Minimum NCF: N/A\r\nDynamic Fabric State: N/A\r\nNCC switchovers: 0\r\nLast NCC switchover: N/A\r\nEscalation-stop-failovers\r\n  Max-failover(remaining): 2(2)\r\n  Failover-period(remaining): 30min(0 days, 0:30:00)\r\nRecovery-mode: supported\r\nBGP NSR: N/A\r\n\r\n\r\n| Type | Id     | Admin    | Operational                        | Model           | Uptime              | Description                | Serial Number        |\r\n+------+--------+----------+------------------------------------+-----------------+---------------------+----------------------------+----------------------+\r\n| NCC  | 0      |          | active-up                          | NCP-36CD-S-SA   | 0 days, 2:04:25     | dn-ncc-0                   |                      |\r\n| NCP  | 0      | enabled  | up                                 | NCP-36CD-S-SA   | 0 days, 2:02:25     | dn-ncp-0                   | YE41F7VK00003B1      |\r\n\r\nNEW-NCP3# ",
-  "timestamp": "2025-09-07T15:36:32.389605",
+  "system_output": "show system | no-more\r\n\r\nSystem Name: NEW-NCP3, System-Id: b5f98f30-f5e0-405e-9119-a9e27a814e90\r\nSystem Type: SA-36CD-S-SA, Family: NCR\r\nEnterprise-Id: 49739\r\nDescription: DRIVENETS Network Cloud Router\r\nSystem status: running \r\nSystem Start Time: 07-Sep-2025 10:03:59 UTC\r\nSystem Uptime: 0 days, 6:14:08\r\nSystem Boot Uptime: 0 days, 6:15:03\r\nVersion: DNOS [25.4.0] build [41_priv], Copyright 2025 DRIVENETS LTD.\r\nPatch: N/A\r\nEnvironment:\r\n\tLocation: N/A\r\n\tFloor: N/A\r\n\tRack: N/A\r\nContact: support@drivenets.com\r\nFabric Minimum Links: N/A\r\nFabric Minimum NCF: N/A\r\nDynamic Fabric State: N/A\r\nNCC switchovers: 0\r\nLast NCC switchover: N/A\r\nEscalation-stop-failovers\r\n  Max-failover(remaining): 2(2)\r\n  Failover-period(remaining): 30min(0 days, 0:30:00)\r\nRecovery-mode: supported\r\nBGP NSR: N/A\r\n\r\n\r\n| Type | Id     | Admin    | Operational                        | Model           | Uptime              | Description                | Serial Number        |\r\n+------+--------+----------+------------------------------------+-----------------+---------------------+----------------------------+----------------------+\r\n| NCC  | 0      |          | active-up                          | NCP-36CD-S-SA   | 0 days, 6:14:08     | dn-ncc-0                   |                      |\r\n| NCP  | 0      | enabled  | up                                 | NCP-36CD-S-SA   | 0 days, 6:12:08     | dn-ncp-0                   | YE41F7VK00003B1      |\r\n\r\nNEW-NCP3# ",
+  "timestamp": "2025-09-07T19:46:15.017092",
   "parsed_info": {
     "version": "DNOS [25.4.0] build [41_priv], Copyright 2025 DRIVENETS LTD.",
-    "uptime": "0 days, 2:04:25",
+    "uptime": "0 days, 6:14:08",
     "location": "N/A",
     "system_id": "b5f98f30-f5e0-405e-9119-a9e27a814e90",
     "system_type": "SA-36CD-S-SA",
@@ -18,8 +18,8 @@
     "description": "DRIVENETS Network Cloud Router",
     "system_status": "running",
     "system_start_time": "07-Sep-2025 10:03:59 UTC",
-    "system_uptime": "0 days, 2:04:25",
-    "system_boot_uptime": "0 days, 2:05:20",
+    "system_uptime": "0 days, 6:14:08",
+    "system_boot_uptime": "0 days, 6:15:03",
     "patch": "N/A",
     "contact": "support@drivenets.com",
     "fabric_minimum_links": "N/A",
@@ -35,7 +35,7 @@
         "admin": "",
         "operational": "active-up",
         "model": "NCP-36CD-S-SA",
-        "uptime": "0 days, 2:04:25",
+        "uptime": "0 days, 6:14:08",
         "description": "dn-ncc-0",
         "serial_number": ""
       },
@@ -45,7 +45,7 @@
         "admin": "enabled",
         "operational": "up",
         "model": "NCP-36CD-S-SA",
-        "uptime": "0 days, 2:02:25",
+        "uptime": "0 days, 6:12:08",
         "description": "dn-ncp-0",
         "serial_number": "YE41F7VK00003B1"
       }

@@ -1,23 +1,9 @@
 {
   "device_name": "NEW-NCP3",
-  "timestamp": "2025-09-07T18:27:52.414040",
-  "total_active_lldp_connections": 13,
-  "total_connected_neighbors": 13,
+  "timestamp": "2025-09-07T19:46:48.648927",
+  "total_active_lldp_connections": 9,
+  "total_connected_neighbors": 9,
   "lldp_connections": {
-    "ge100-0/0/9/0": {
-      "local_interface": "ge100-0/0/9/0",
-      "neighbor_system_name": "NEW-NCP3",
-      "neighbor_interface": "ge100-0/0/18/0",
-      "neighbor_ttl": "120",
-      "has_neighbor": true
-    },
-    "ge100-0/0/9/1": {
-      "local_interface": "ge100-0/0/9/1",
-      "neighbor_system_name": "NEW-NCP3",
-      "neighbor_interface": "ge100-0/0/18/1",
-      "neighbor_ttl": "120",
-      "has_neighbor": true
-    },
     "ge100-0/0/10/0": {
       "local_interface": "ge100-0/0/10/0",
       "neighbor_system_name": "NEW-NCP3",
@@ -29,20 +15,6 @@
       "local_interface": "ge100-0/0/10/1",
       "neighbor_system_name": "NEW-NCP3",
       "neighbor_interface": "ge100-0/0/20/1",
-      "neighbor_ttl": "120",
-      "has_neighbor": true
-    },
-    "ge100-0/0/18/0": {
-      "local_interface": "ge100-0/0/18/0",
-      "neighbor_system_name": "NEW-NCP3",
-      "neighbor_interface": "ge100-0/0/9/0",
-      "neighbor_ttl": "120",
-      "has_neighbor": true
-    },
-    "ge100-0/0/18/1": {
-      "local_interface": "ge100-0/0/18/1",
-      "neighbor_system_name": "NEW-NCP3",
-      "neighbor_interface": "ge100-0/0/9/1",
       "neighbor_ttl": "120",
       "has_neighbor": true
     },

@@ -1,0 +1,599 @@
+
+# NEW-NCP3 config-start [07-Sep-2025 16:18:45 UTC]
+
+# VERSION DNOS [25.4.0.41_priv.tmussayoff_dev_v25_4_193234_ncp3sa], Copyright 2025 DRIVENETS LTD.
+# USER dnroot
+
+system
+  grpc
+    security
+      tls server-certificate grpc_dnor
+    !
+  !
+  login
+    user dnroot
+      description "dnroot user"
+      password $6$m7b5lYW.PtBTZ0lr$ibN6YvwGYpPauDUIbNu7XMYRkKOnG3H.gyCQVweYv/lgsXMj65ClO8yeGTYX/Rmy80Bx23AeXOWM47nDXr9sN.
+      role admin
+    !
+    user dntechsupport
+      description "techsupport user"
+      password $6$m0NpQOgH8CusogMK$7JYzbJt55BxEOTkCG6z.9DNTPhDEbX8TN4Po1/mUJzlu/KaywxSoIRLvNYDdfE/WlVZVS2nfXd5J6S2Vin9D3/
+      role techsupport
+    !
+    ipmi
+      user admin
+        password enc-gAAAAABmq2hbWNJeMAc8_waIxsnc_enwuPfG8X6UqOZH_ytA1kwQScF7rlSi_6n3_NfPenA-AdpeWALLJ91cnsU3pNEQlldiPA==
+        privilege ADMINISTRATOR
+      !
+      user dnroot
+        password enc-gAAAAABmq2g4yq16J1ol3v4xEJ_2hiAPzWqel1YJNtaw4DgHdb6OdP6K6HKnPVBjuKJ-d12Mi9r5_TuI4sippgIVgKnf4l-GLw==
+        privilege ADMINISTRATOR
+      !
+    !
+  !
+  ssh
+    security
+      ca-signature-algorithms ecdsa-sha2-nistp256,rsa-sha2-256,rsa-sha2-512,ssh-ed25519
+      ciphers aes128-ctr,aes128-gcm-openssh.com,aes192-ctr,aes256-ctr,aes256-gcm-openssh.com,chacha20-poly1305-openssh.com
+      host-key-algorithms rsa-sha2-256,rsa-sha2-512,ssh-ed25519
+      macs hmac-sha2-256,hmac-sha2-256-etm-openssh.com,hmac-sha2-512,hmac-sha2-512-etm-openssh.com,umac-64-etm-openssh.com,umac-64-openssh.com,umac-128-etm-openssh.com,umac-128-openssh.com
+    !
+  !
+!
+
+interfaces
+  bundle-1
+    admin-state enabled
+    mixed-type 100G-400G
+  !
+  bundle-2
+    admin-state enabled
+  !
+  ge100-0/0/0/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/0/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/2/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/2/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/3/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/3/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/4/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/4/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/5/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/5/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/6/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/6/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/7/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/7/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/8/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/8/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/10/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/10/1
+    admin-state enabled
+    bundle-id 2
+    fec none
+  !
+  ge100-0/0/11/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/11/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/12/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/12/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/13/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/13/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/14/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/14/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/15/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/15/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/16/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/16/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/18/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/18/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/20/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/20/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/22/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/22/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/23/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/23/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/24/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/24/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/25/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/25/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/26/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/26/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/27/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/27/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/28/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/28/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/29/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/29/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/30/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/30/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/31/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/31/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/32/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/32/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/33/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/33/1
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/34/0
+    admin-state enabled
+    fec none
+  !
+  ge100-0/0/34/1
+    admin-state enabled
+    fec none
+  !
+  ge400-0/0/0
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/2
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/3
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/4
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/5
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/6
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/7
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/8
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/9
+    admin-state enabled
+  !
+  ge400-0/0/10
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/11
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/12
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/13
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/14
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/15
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/16
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/18
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/20
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/21
+    admin-state enabled
+  !
+  ge400-0/0/22
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/23
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/24
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/25
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/26
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/27
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/28
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/29
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/30
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/31
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/32
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/33
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ge400-0/0/34
+    breakout 100g-2x
+    fec rs-fec-544-514
+    util-rate-threshold 100
+  !
+  ipmi-ncc-0/0
+    ipv4-address dhcp
+  !
+  mgmt-ncc-0
+  !
+!
+
+protocols
+  lldp
+    interface ge100-0/0/0/0
+    !
+    interface ge100-0/0/0/1
+    !
+    interface ge100-0/0/2/0
+    !
+    interface ge100-0/0/2/1
+    !
+    interface ge100-0/0/3/0
+    !
+    interface ge100-0/0/3/1
+    !
+    interface ge100-0/0/4/0
+    !
+    interface ge100-0/0/4/1
+    !
+    interface ge100-0/0/5/0
+    !
+    interface ge100-0/0/5/1
+    !
+    interface ge100-0/0/6/0
+    !
+    interface ge100-0/0/6/1
+    !
+    interface ge100-0/0/7/0
+    !
+    interface ge100-0/0/7/1
+    !
+    interface ge100-0/0/8/0
+    !
+    interface ge100-0/0/8/1
+    !
+    interface ge100-0/0/10/0
+    !
+    interface ge100-0/0/10/1
+    !
+    interface ge100-0/0/11/0
+    !
+    interface ge100-0/0/11/1
+    !
+    interface ge100-0/0/12/0
+    !
+    interface ge100-0/0/12/1
+    !
+    interface ge100-0/0/13/0
+    !
+    interface ge100-0/0/13/1
+    !
+    interface ge100-0/0/14/0
+    !
+    interface ge100-0/0/14/1
+    !
+    interface ge100-0/0/15/0
+    !
+    interface ge100-0/0/15/1
+    !
+    interface ge100-0/0/16/0
+    !
+    interface ge100-0/0/16/1
+    !
+    interface ge100-0/0/18/0
+    !
+    interface ge100-0/0/18/1
+    !
+    interface ge100-0/0/20/0
+    !
+    interface ge100-0/0/20/1
+      transmit enabled
+    !
+    interface ge100-0/0/22/0
+    !
+    interface ge100-0/0/22/1
+    !
+    interface ge100-0/0/23/0
+    !
+    interface ge100-0/0/23/1
+    !
+    interface ge100-0/0/24/0
+    !
+    interface ge100-0/0/24/1
+    !
+    interface ge100-0/0/25/0
+    !
+    interface ge100-0/0/25/1
+    !
+    interface ge100-0/0/26/0
+    !
+    interface ge100-0/0/26/1
+    !
+    interface ge100-0/0/27/0
+    !
+    interface ge100-0/0/27/1
+    !
+    interface ge100-0/0/28/0
+    !
+    interface ge100-0/0/28/1
+    !
+    interface ge100-0/0/29/0
+    !
+    interface ge100-0/0/29/1
+    !
+    interface ge100-0/0/30/0
+    !
+    interface ge100-0/0/30/1
+    !
+    interface ge100-0/0/31/0
+    !
+    interface ge100-0/0/31/1
+    !
+    interface ge100-0/0/32/0
+    !
+    interface ge100-0/0/32/1
+    !
+    interface ge100-0/0/33/0
+    !
+    interface ge100-0/0/33/1
+    !
+    interface ge100-0/0/34/0
+    !
+    interface ge100-0/0/34/1
+    !
+  !
+!
+
+qos
+  hw-mapping
+    queue-size
+      speed-ranges
+        admin-state enabled
+        upto 50 mbps use 50 mbps
+        upto 100 mbps use 100 mbps
+        upto 250 mbps use 250 mbps
+        upto 500 mbps use 500 mbps
+        upto 750 mbps use 750 mbps
+        upto 1 gbps use 1 gbps
+      !
+    !
+  !
+!
+
+# NEW-NCP3 config-end
