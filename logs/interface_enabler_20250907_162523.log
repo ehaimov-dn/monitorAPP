@@ -1,0 +1,48 @@
+2025-09-07 16:25:23,825 - INFO - Interface Enabler started
+2025-09-07 16:25:43,811 - INFO - Connecting to YE41F7VK00003B1
+2025-09-07 16:25:43,985 - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-09-07 16:25:44,675 - INFO - Authentication (password) successful!
+2025-09-07 16:25:47,048 - INFO - Successfully connected to device
+2025-09-07 16:25:47,048 - INFO - Executing bulk configuration:
+2025-09-07 16:25:47,048 - INFO - Bulk config:
+configure
+interfaces
+ge400-0/0/0 breakout 100g-4x
+ge400-0/0/10 breakout 100g-4x
+ge400-0/0/11 breakout 100g-4x
+ge400-0/0/12 breakout 100g-4x
+ge400-0/0/13 breakout 100g-4x
+ge400-0/0/14 breakout 100g-4x
+ge400-0/0/15 breakout 100g-4x
+ge400-0/0/16 breakout 100g-4x
+ge400-0/0/18 breakout 100g-4x
+ge400-0/0/2 breakout 100g-4x
+ge400-0/0/20 breakout 100g-4x
+ge400-0/0/21 breakout 100g-4x
+ge400-0/0/22 breakout 100g-4x
+ge400-0/0/23 breakout 100g-4x
+ge400-0/0/24 breakout 100g-4x
+ge400-0/0/25 breakout 100g-4x
+ge400-0/0/26 breakout 100g-4x
+ge400-0/0/27 breakout 100g-4x
+ge400-0/0/28 breakout 100g-4x
+ge400-0/0/29 breakout 100g-4x
+ge400-0/0/3 breakout 100g-4x
+ge400-0/0/30 breakout 100g-4x
+ge400-0/0/31 breakout 100g-4x
+ge400-0/0/32 breakout 100g-4x
+ge400-0/0/33 breakout 100g-4x
+ge400-0/0/34 breakout 100g-4x
+ge400-0/0/4 breakout 100g-4x
+ge400-0/0/5 breakout 100g-4x
+ge400-0/0/6 breakout 100g-4x
+ge400-0/0/7 breakout 100g-4x
+ge400-0/0/8 breakout 100g-4x
+ge400-0/0/9 breakout 100g-4x
+top
+2025-09-07 16:25:52,052 - INFO - Bulk configuration completed
+2025-09-07 16:25:52,052 - INFO - Committing configuration
+2025-09-07 16:25:56,057 - ERROR - Commit failed - device reported error: commit
+ERROR: cannot configure breakout on ge400-0/0/0 because it has lldp configured.
+[0mNEW-NCP3(cfg)# 
+2025-09-07 16:25:56,057 - INFO - Disconnected from device

@@ -1,0 +1,112 @@
+2025-09-07 18:05:31,580 - INFO - Interface Enabler started
+2025-09-07 18:05:41,148 - INFO - Connecting to YE41F7VK00003B1
+2025-09-07 18:05:41,324 - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-09-07 18:05:42,016 - INFO - Authentication (password) successful!
+2025-09-07 18:05:44,388 - INFO - Successfully connected to device
+2025-09-07 18:05:44,389 - INFO - Executing bulk configuration:
+2025-09-07 18:05:44,389 - INFO - Bulk config:
+configure
+interfaces
+ge100-0/0/0/0 admin-state enabled
+ge100-0/0/0/1 admin-state enabled
+ge100-0/0/10/0 admin-state enabled
+ge100-0/0/10/1 admin-state enabled
+ge100-0/0/11/0 admin-state enabled
+ge100-0/0/11/1 admin-state enabled
+ge100-0/0/12/0 admin-state enabled
+ge100-0/0/12/1 admin-state enabled
+ge100-0/0/13/0 admin-state enabled
+ge100-0/0/13/1 admin-state enabled
+ge100-0/0/14/0 admin-state enabled
+ge100-0/0/14/1 admin-state enabled
+ge100-0/0/15/0 admin-state enabled
+ge100-0/0/15/1 admin-state enabled
+ge100-0/0/16/0 admin-state enabled
+ge100-0/0/16/1 admin-state enabled
+ge100-0/0/18/0 admin-state enabled
+ge100-0/0/18/1 admin-state enabled
+ge100-0/0/2/0 admin-state enabled
+ge100-0/0/2/1 admin-state enabled
+ge100-0/0/20/0 admin-state enabled
+ge100-0/0/20/1 admin-state enabled
+ge100-0/0/21/0 admin-state enabled
+ge100-0/0/21/1 admin-state enabled
+ge100-0/0/22/0 admin-state enabled
+ge100-0/0/22/1 admin-state enabled
+ge100-0/0/23/0 admin-state enabled
+ge100-0/0/23/1 admin-state enabled
+ge100-0/0/24/0 admin-state enabled
+ge100-0/0/24/1 admin-state enabled
+ge100-0/0/25/0 admin-state enabled
+ge100-0/0/25/1 admin-state enabled
+ge100-0/0/26/0 admin-state enabled
+ge100-0/0/26/1 admin-state enabled
+ge100-0/0/27/0 admin-state enabled
+ge100-0/0/27/1 admin-state enabled
+ge100-0/0/28/0 admin-state enabled
+ge100-0/0/28/1 admin-state enabled
+ge100-0/0/29/0 admin-state enabled
+ge100-0/0/29/1 admin-state enabled
+ge100-0/0/3/0 admin-state enabled
+ge100-0/0/3/1 admin-state enabled
+ge100-0/0/30/0 admin-state enabled
+ge100-0/0/30/1 admin-state enabled
+ge100-0/0/31/0 admin-state enabled
+ge100-0/0/31/1 admin-state enabled
+ge100-0/0/32/0 admin-state enabled
+ge100-0/0/32/1 admin-state enabled
+ge100-0/0/33/0 admin-state enabled
+ge100-0/0/33/1 admin-state enabled
+ge100-0/0/34/0 admin-state enabled
+ge100-0/0/34/1 admin-state enabled
+ge100-0/0/4/0 admin-state enabled
+ge100-0/0/4/1 admin-state enabled
+ge100-0/0/5/0 admin-state enabled
+ge100-0/0/5/1 admin-state enabled
+ge100-0/0/6/0 admin-state enabled
+ge100-0/0/6/1 admin-state enabled
+ge100-0/0/7/0 admin-state enabled
+ge100-0/0/7/1 admin-state enabled
+ge100-0/0/8/0 admin-state enabled
+ge100-0/0/8/1 admin-state enabled
+ge100-0/0/9/0 admin-state enabled
+ge100-0/0/9/1 admin-state enabled
+ge400-0/0/0 admin-state enabled
+ge400-0/0/10 admin-state enabled
+ge400-0/0/11 admin-state enabled
+ge400-0/0/12 admin-state enabled
+ge400-0/0/13 admin-state enabled
+ge400-0/0/14 admin-state enabled
+ge400-0/0/15 admin-state enabled
+ge400-0/0/16 admin-state enabled
+ge400-0/0/18 admin-state enabled
+ge400-0/0/2 admin-state enabled
+ge400-0/0/20 admin-state enabled
+ge400-0/0/21 admin-state enabled
+ge400-0/0/22 admin-state enabled
+ge400-0/0/23 admin-state enabled
+ge400-0/0/24 admin-state enabled
+ge400-0/0/25 admin-state enabled
+ge400-0/0/26 admin-state enabled
+ge400-0/0/27 admin-state enabled
+ge400-0/0/28 admin-state enabled
+ge400-0/0/29 admin-state enabled
+ge400-0/0/3 admin-state enabled
+ge400-0/0/30 admin-state enabled
+ge400-0/0/31 admin-state enabled
+ge400-0/0/32 admin-state enabled
+ge400-0/0/33 admin-state enabled
+ge400-0/0/34 admin-state enabled
+ge400-0/0/4 admin-state enabled
+ge400-0/0/5 admin-state enabled
+ge400-0/0/6 admin-state enabled
+ge400-0/0/7 admin-state enabled
+ge400-0/0/8 admin-state enabled
+ge400-0/0/9 admin-state enabled
+top
+2025-09-07 18:05:49,393 - INFO - Bulk configuration completed
+2025-09-07 18:05:49,394 - INFO - Committing configuration
+2025-09-07 18:05:51,396 - ERROR - Commit failed - device reported error: commit
+ERROR: cannot configure interface ge400-0/0/0 because it has breakout configured.
+[0mNEW-NCP3(cfg)# 
+2025-09-07 18:05:51,397 - INFO - Disconnected from device

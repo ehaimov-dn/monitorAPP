@@ -1,0 +1,57 @@
+2025-09-07 16:08:24,452 - INFO - Interface Enabler started
+2025-09-07 16:08:36,997 - INFO - Connecting to YE41F7VK00003B1
+2025-09-07 16:08:37,170 - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-09-07 16:08:37,871 - INFO - Authentication (password) successful!
+2025-09-07 16:08:40,236 - INFO - Successfully connected to device
+2025-09-07 16:08:40,237 - INFO - Executing bulk configuration:
+2025-09-07 16:08:40,237 - INFO - Bulk config:
+configure
+interfaces
+ge400-0/0/0 admin-state enabled
+ge400-0/0/10 admin-state enabled
+ge400-0/0/11 admin-state enabled
+ge400-0/0/12 admin-state enabled
+ge400-0/0/13 admin-state enabled
+ge400-0/0/14 admin-state enabled
+ge400-0/0/15 admin-state enabled
+ge400-0/0/16 admin-state enabled
+ge400-0/0/18 admin-state enabled
+ge400-0/0/2 admin-state enabled
+ge400-0/0/20 admin-state enabled
+ge400-0/0/21 admin-state enabled
+ge400-0/0/22 admin-state enabled
+ge400-0/0/23 admin-state enabled
+ge400-0/0/24 admin-state enabled
+ge400-0/0/25 admin-state enabled
+ge400-0/0/26 admin-state enabled
+ge400-0/0/27 admin-state enabled
+ge400-0/0/28 admin-state enabled
+ge400-0/0/29 admin-state enabled
+ge400-0/0/3 admin-state enabled
+ge400-0/0/30 admin-state enabled
+ge400-0/0/31 admin-state enabled
+ge400-0/0/32 admin-state enabled
+ge400-0/0/33 admin-state enabled
+ge400-0/0/34 admin-state enabled
+ge400-0/0/4 admin-state enabled
+ge400-0/0/5 admin-state enabled
+ge400-0/0/6 admin-state enabled
+ge400-0/0/7 admin-state enabled
+ge400-0/0/8 admin-state enabled
+ge400-0/0/9 admin-state enabled
+top
+2025-09-07 16:08:45,242 - INFO - Bulk configuration completed
+2025-09-07 16:08:45,243 - INFO - Committing configuration
+2025-09-07 16:08:47,245 - INFO - Commit succeeded - confirmed by device
+2025-09-07 16:08:47,246 - INFO - Configuration committed successfully
+2025-09-07 16:08:47,247 - INFO - Network Mapper started
+2025-09-07 16:08:47,247 - INFO - Starting network_mapper validation for NEW-NCP3
+2025-09-07 16:08:47,248 - INFO - Attempting to connect to YE41F7VK00003B1
+2025-09-07 16:08:47,420 - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-09-07 16:08:48,119 - INFO - Authentication (password) successful!
+2025-09-07 16:08:50,484 - INFO - Successfully connected to device
+2025-09-07 16:08:50,485 - INFO - Waiting for CLI to be ready
+2025-09-07 16:08:52,487 - INFO - CLI is ready - detected prompt: 'NEW-NCP3#'
+2025-09-07 16:08:52,488 - ERROR - Validation failed: 'NetworkMapper' object has no attribute 'get_interfaces_info'
+2025-09-07 16:08:52,488 - INFO - Disconnected from device
+2025-09-07 16:08:52,488 - INFO - Disconnected from device

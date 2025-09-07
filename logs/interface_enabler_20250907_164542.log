@@ -1,0 +1,208 @@
+2025-09-07 16:45:42,719 - INFO - Interface Enabler started
+2025-09-07 16:46:01,678 - INFO - Preparing breakout configuration for ge400-0/0/0
+2025-09-07 16:46:01,678 - INFO - Preparing breakout configuration for ge400-0/0/10
+2025-09-07 16:46:01,679 - INFO - Preparing breakout configuration for ge400-0/0/11
+2025-09-07 16:46:01,679 - INFO - Preparing breakout configuration for ge400-0/0/12
+2025-09-07 16:46:01,679 - INFO - Preparing breakout configuration for ge400-0/0/13
+2025-09-07 16:46:01,679 - INFO - Preparing breakout configuration for ge400-0/0/14
+2025-09-07 16:46:01,679 - INFO - Preparing breakout configuration for ge400-0/0/15
+2025-09-07 16:46:01,679 - INFO - Preparing breakout configuration for ge400-0/0/16
+2025-09-07 16:46:01,680 - INFO - Preparing breakout configuration for ge400-0/0/18
+2025-09-07 16:46:01,680 - INFO - Preparing breakout configuration for ge400-0/0/2
+2025-09-07 16:46:01,680 - INFO - Preparing breakout configuration for ge400-0/0/20
+2025-09-07 16:46:01,680 - INFO - Preparing breakout configuration for ge400-0/0/21
+2025-09-07 16:46:01,680 - INFO - Preparing breakout configuration for ge400-0/0/22
+2025-09-07 16:46:01,680 - INFO - Preparing breakout configuration for ge400-0/0/23
+2025-09-07 16:46:01,681 - INFO - Preparing breakout configuration for ge400-0/0/24
+2025-09-07 16:46:01,681 - INFO - Preparing breakout configuration for ge400-0/0/25
+2025-09-07 16:46:01,681 - INFO - Preparing breakout configuration for ge400-0/0/26
+2025-09-07 16:46:01,681 - INFO - Preparing breakout configuration for ge400-0/0/27
+2025-09-07 16:46:01,681 - INFO - Preparing breakout configuration for ge400-0/0/28
+2025-09-07 16:46:01,681 - INFO - Preparing breakout configuration for ge400-0/0/29
+2025-09-07 16:46:01,682 - INFO - Preparing breakout configuration for ge400-0/0/3
+2025-09-07 16:46:01,682 - INFO - Preparing breakout configuration for ge400-0/0/30
+2025-09-07 16:46:01,682 - INFO - Preparing breakout configuration for ge400-0/0/31
+2025-09-07 16:46:01,682 - INFO - Preparing breakout configuration for ge400-0/0/32
+2025-09-07 16:46:01,682 - INFO - Preparing breakout configuration for ge400-0/0/33
+2025-09-07 16:46:01,682 - INFO - Preparing breakout configuration for ge400-0/0/34
+2025-09-07 16:46:01,682 - INFO - Preparing breakout configuration for ge400-0/0/4
+2025-09-07 16:46:01,683 - INFO - Preparing breakout configuration for ge400-0/0/5
+2025-09-07 16:46:01,683 - INFO - Preparing breakout configuration for ge400-0/0/6
+2025-09-07 16:46:01,683 - INFO - Preparing breakout configuration for ge400-0/0/7
+2025-09-07 16:46:01,683 - INFO - Preparing breakout configuration for ge400-0/0/8
+2025-09-07 16:46:01,683 - INFO - Preparing breakout configuration for ge400-0/0/9
+2025-09-07 16:46:04,379 - INFO - Connecting to YE41F7VK00003B1
+2025-09-07 16:46:04,555 - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-09-07 16:46:05,252 - INFO - Authentication (password) successful!
+2025-09-07 16:46:07,623 - INFO - Successfully connected to device
+2025-09-07 16:46:07,623 - INFO - Executing bulk configuration:
+2025-09-07 16:46:07,623 - INFO - Bulk config:
+configure
+interfaces
+ge400-0/0/0 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/0
+interfaces
+ge400-0/0/10 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/10
+interfaces
+ge400-0/0/11 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/11
+interfaces
+ge400-0/0/12 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/12
+interfaces
+ge400-0/0/13 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/13
+interfaces
+ge400-0/0/14 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/14
+interfaces
+ge400-0/0/15 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/15
+interfaces
+ge400-0/0/16 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/16
+interfaces
+ge400-0/0/18 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/18
+interfaces
+ge400-0/0/2 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/2
+interfaces
+ge400-0/0/20 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/20
+interfaces
+ge400-0/0/21 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/21
+interfaces
+ge400-0/0/22 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/22
+interfaces
+ge400-0/0/23 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/23
+interfaces
+ge400-0/0/24 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/24
+interfaces
+ge400-0/0/25 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/25
+interfaces
+ge400-0/0/26 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/26
+interfaces
+ge400-0/0/27 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/27
+interfaces
+ge400-0/0/28 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/28
+interfaces
+ge400-0/0/29 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/29
+interfaces
+ge400-0/0/3 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/3
+interfaces
+ge400-0/0/30 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/30
+interfaces
+ge400-0/0/31 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/31
+interfaces
+ge400-0/0/32 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/32
+interfaces
+ge400-0/0/33 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/33
+interfaces
+ge400-0/0/34 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/34
+interfaces
+ge400-0/0/4 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/4
+interfaces
+ge400-0/0/5 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/5
+interfaces
+ge400-0/0/6 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/6
+interfaces
+ge400-0/0/7 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/7
+interfaces
+ge400-0/0/8 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/8
+interfaces
+ge400-0/0/9 admin-state disabled
+top
+no protocols lldp interface ge400-0/0/9
+interfaces
+ge400-0/0/0 breakout 100g-4x
+ge400-0/0/10 breakout 100g-4x
+ge400-0/0/11 breakout 100g-4x
+ge400-0/0/12 breakout 100g-4x
+ge400-0/0/13 breakout 100g-4x
+ge400-0/0/14 breakout 100g-4x
+ge400-0/0/15 breakout 100g-4x
+ge400-0/0/16 breakout 100g-4x
+ge400-0/0/18 breakout 100g-4x
+ge400-0/0/2 breakout 100g-4x
+ge400-0/0/20 breakout 100g-4x
+ge400-0/0/21 breakout 100g-4x
+ge400-0/0/22 breakout 100g-4x
+ge400-0/0/23 breakout 100g-4x
+ge400-0/0/24 breakout 100g-4x
+ge400-0/0/25 breakout 100g-4x
+ge400-0/0/26 breakout 100g-4x
+ge400-0/0/27 breakout 100g-4x
+ge400-0/0/28 breakout 100g-4x
+ge400-0/0/29 breakout 100g-4x
+ge400-0/0/3 breakout 100g-4x
+ge400-0/0/30 breakout 100g-4x
+ge400-0/0/31 breakout 100g-4x
+ge400-0/0/32 breakout 100g-4x
+ge400-0/0/33 breakout 100g-4x
+ge400-0/0/34 breakout 100g-4x
+ge400-0/0/4 breakout 100g-4x
+ge400-0/0/5 breakout 100g-4x
+ge400-0/0/6 breakout 100g-4x
+ge400-0/0/7 breakout 100g-4x
+ge400-0/0/8 breakout 100g-4x
+ge400-0/0/9 breakout 100g-4x
+top
+2025-09-07 16:46:12,624 - INFO - Bulk configuration completed
+2025-09-07 16:46:12,625 - INFO - Committing configuration
+2025-09-07 16:46:16,629 - ERROR - Commit failed - device reported error: commit
+ERROR: cannot configure breakout on ge400-0/0/10 because it's a member of bundle interface bundle-1.
+[0mNEW-NCP3(cfg)# 
+2025-09-07 16:46:16,630 - INFO - Disconnected from device

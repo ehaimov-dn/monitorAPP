@@ -1,0 +1,50 @@
+2025-09-07 16:03:11,011 - INFO - Interface Enabler started
+2025-09-07 16:03:22,039 - INFO - Connecting to YE41F7VK00003B1
+2025-09-07 16:03:22,213 - INFO - Connected (version 2.0, client OpenSSH_9.6p1)
+2025-09-07 16:03:22,907 - INFO - Authentication (password) successful!
+2025-09-07 16:03:25,277 - INFO - Successfully connected to device
+2025-09-07 16:03:25,278 - INFO - Executing bulk configuration:
+2025-09-07 16:03:25,278 - INFO - Bulk config:
+configure
+interfaces
+ge400-0/0/0 admin-state disabled
+ge400-0/0/10 admin-state disabled
+ge400-0/0/11 admin-state disabled
+ge400-0/0/12 admin-state disabled
+ge400-0/0/13 admin-state disabled
+ge400-0/0/14 admin-state disabled
+ge400-0/0/15 admin-state disabled
+ge400-0/0/16 admin-state disabled
+ge400-0/0/18 admin-state disabled
+ge400-0/0/2 admin-state disabled
+ge400-0/0/20 admin-state disabled
+ge400-0/0/21 admin-state disabled
+ge400-0/0/22 admin-state disabled
+ge400-0/0/23 admin-state disabled
+ge400-0/0/24 admin-state disabled
+ge400-0/0/25 admin-state disabled
+ge400-0/0/26 admin-state disabled
+ge400-0/0/27 admin-state disabled
+ge400-0/0/28 admin-state disabled
+ge400-0/0/29 admin-state disabled
+ge400-0/0/3 admin-state disabled
+ge400-0/0/30 admin-state disabled
+ge400-0/0/31 admin-state disabled
+ge400-0/0/32 admin-state disabled
+ge400-0/0/33 admin-state disabled
+ge400-0/0/34 admin-state disabled
+ge400-0/0/4 admin-state disabled
+ge400-0/0/5 admin-state disabled
+ge400-0/0/6 admin-state disabled
+ge400-0/0/7 admin-state disabled
+ge400-0/0/8 admin-state disabled
+ge400-0/0/9 admin-state disabled
+exit
+exit
+2025-09-07 16:03:40,293 - INFO - No data received for 10 seconds, assuming completion
+2025-09-07 16:03:40,294 - INFO - Bulk configuration execution completed
+2025-09-07 16:03:40,294 - INFO - Committing configuration
+2025-09-07 16:05:42,415 - ERROR - Commit timeout - did not receive success confirmation
+2025-09-07 16:05:42,415 - ERROR - Commit output received: commit
+Warning: Configuration includes uncommitted changes, would you like to commit them before exiting (yes/no/cancel) [cancel]? 
+2025-09-07 16:05:42,418 - INFO - Disconnected from device
