@@ -646,6 +646,17 @@ class InterfaceEnabler:
                 commands = self.generate_bulk_configuration(filtered_interfaces, config_type, config_value)
                 lldp_action = "Enable" if config_type == 5 else "Disable"
                 print(f"Generated LLDP {lldp_action} configuration commands:")
+            elif config_type in [1, 2]:  # Enable/Disable interfaces
+                # Filter out not-present interfaces for enable/disable operations
+                filtered_interfaces = self.filter_interfaces_for_lldp(selected_interfaces, interfaces_data)
+                if len(filtered_interfaces) != len(selected_interfaces):
+                    skipped_count = len(selected_interfaces) - len(filtered_interfaces)
+                    action = "enable" if config_type == 1 else "disable"
+                    print(f"⚠️  Skipped {skipped_count} not-present interfaces for {action} operation")
+                
+                commands = self.generate_bulk_configuration(filtered_interfaces, config_type, config_value)
+                action_name = "Enable" if config_type == 1 else "Disable"
+                print(f"Generated {action_name} configuration commands:")
             else:
                 commands = self.generate_bulk_configuration(selected_interfaces, config_type, config_value)
                 print("Generated configuration commands:")
