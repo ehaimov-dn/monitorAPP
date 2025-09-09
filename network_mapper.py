@@ -1869,6 +1869,16 @@ class NetworkMapper:
                 self.logger.error(f"CLI not ready for {device_name}")
                 return False
             
+            # Collect system information first
+            self.logger.debug(f"Collecting system information for {device_name}")
+            system_output = self.execute_command("show system | no-more")
+            
+            if system_output:
+                # Update system information for existing device
+                self.parse_system_information(system_output, credentials, device_name)
+            else:
+                self.logger.warning(f"Failed to get system information for {device_name}")
+            
             # Collect interface information
             self.logger.debug(f"Collecting interface information for {device_name}")
             interface_output = self.execute_command("show interfaces | no-more")

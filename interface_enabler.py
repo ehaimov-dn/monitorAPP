@@ -81,14 +81,30 @@ class InterfaceEnabler:
         for interface_name, interface_data in interfaces_data.items():
             # Filter out bundle, loopback, and other logical interfaces
             if not any(interface_name.startswith(prefix) for prefix in ['bundle-', 'lo', 'mgmt', 'ctrl-', 'ice']):
-                # Check if it's a physical interface (ge, xe, etc.)
+                # Check if it's a physical interface (ge, xe, etc.) - includes both parent and child breakout interfaces
                 if re.match(r'^(ge|xe|ce)\d+', interface_name):
-                    # Skip interfaces that are not present
+                    # Skip interfaces that are not present (these are parent breakout interfaces)
                     operational_state = interface_data.get('operational_state', '').lower()
                     if operational_state != 'not-present':
                         physical_interfaces[interface_name] = interface_data
         
         return physical_interfaces
+    
+    def get_deletable_physical_interfaces(self, interfaces_data):
+        """Extract only deletable physical interfaces (3-number format like ge100-0/0/0)"""
+        deletable_interfaces = {}
+        
+        for interface_name, interface_data in interfaces_data.items():
+            # Filter out bundle, loopback, and other logical interfaces
+            if not any(interface_name.startswith(prefix) for prefix in ['bundle-', 'lo', 'mgmt', 'ctrl-', 'ice']):
+                # Check if it's a deletable physical interface (3 numbers only)
+                # Pattern: ge100-0/0/0 or ge400-0/0/21 (not ge100-0/0/0/0 which has 4 numbers)
+                if re.match(r'^(ge|xe|ce)\d+-\d+/\d+/\d+$', interface_name):
+                    # For delete operations, include all interfaces (even not-present ones)
+                    # since user might want to delete their configuration
+                    deletable_interfaces[interface_name] = interface_data
+        
+        return deletable_interfaces
     
     def filter_interfaces_for_lldp(self, interfaces, interfaces_data):
         """Filter interfaces for LLDP configuration, excluding not-present interfaces"""
@@ -139,17 +155,18 @@ class InterfaceEnabler:
         print("4. Configure breakout")
         print("5. Enable LLDP on interfaces")
         print("6. Disable LLDP on interfaces")
-        print("7. Exit")
+        print("7. Delete interfaces")
+        print("8. Exit")
         
         while True:
             try:
-                choice = input("\nSelect configuration type (1-7): ").strip()
+                choice = input("\nSelect configuration type (1-8): ").strip()
                 choice_num = int(choice)
                 
-                if 1 <= choice_num <= 7:
+                if 1 <= choice_num <= 8:
                     return choice_num
                 else:
-                    print("Invalid choice. Please enter 1-7")
+                    print("Invalid choice. Please enter 1-8")
             except ValueError:
                 print("Invalid input. Please enter a number.")
     
@@ -270,6 +287,21 @@ class InterfaceEnabler:
                     commands.append(f"protocols lldp interface {interface} ^")
                 elif config_type == 6:  # Disable LLDP
                     commands.append(f"no protocols lldp interface {interface} ^")
+        elif config_type == 7:  # Delete interface - needs config mode, not interfaces mode
+            commands.append("configure")
+            
+            # First, clean up any LLDP configurations on breakout interfaces that might exist
+            for interface in interfaces:
+                # For each main interface (e.g., ge400-0/0/0), clean up potential breakout interfaces
+                # that might have LLDP configured (e.g., ge100-0/0/0/0, ge100-0/0/0/1, etc.)
+                base_name = interface.replace('ge400-', 'ge100-')  # Convert ge400-0/0/0 to ge100-0/0/0
+                for breakout_port in range(4):  # Typically 0-3 for 4x breakout
+                    breakout_interface = f"{base_name}/{breakout_port}"
+                    commands.append(f"no protocols lldp interface {breakout_interface} ^")
+            
+            # Now delete the main physical interfaces
+            for interface in interfaces:
+                commands.append(f"no interface {interface}")
         else:
             # Regular interface configuration
             commands.append("configure")
@@ -607,15 +639,26 @@ class InterfaceEnabler:
             # Step 2: Choose configuration type
             print("\n=== Step 2: Configuration Type ===")
             config_type = self.display_configuration_menu()
-            if config_type == 7:  # Exit
+            if config_type == 8:  # Exit
                 return
             
-            config_names = {1: "Enable", 2: "Disable", 3: "Port Speed", 4: "Breakout", 5: "Enable LLDP", 6: "Disable LLDP"}
+            config_names = {1: "Enable", 2: "Disable", 3: "Port Speed", 4: "Breakout", 5: "Enable LLDP", 6: "Disable LLDP", 7: "Delete Interface"}
             print(f"\nSelected configuration: {config_names[config_type]}")
             
             # Step 3: Select interfaces
             print(f"\n=== Step 3: Interface Selection ===")
-            selected_interfaces = self.select_interfaces(physical_interfaces, config_type)
+            
+            # For delete operation, use only deletable physical interfaces
+            if config_type == 7:  # Delete interfaces
+                deletable_interfaces = self.get_deletable_physical_interfaces(interfaces_data)
+                if not deletable_interfaces:
+                    print("❌ No deletable physical interfaces found.")
+                    print("💡 Only main physical interfaces (3-number format like ge100-0/0/0) can be deleted.")
+                    return
+                print(f"🔍 Found {len(deletable_interfaces)} deletable physical interfaces (3-number format)")
+                selected_interfaces = self.select_interfaces(deletable_interfaces, config_type)
+            else:
+                selected_interfaces = self.select_interfaces(physical_interfaces, config_type)
             print(f"\nSelected {len(selected_interfaces)} interfaces:")
             for interface in selected_interfaces:
                 print(f"  - {interface}")
@@ -657,6 +700,9 @@ class InterfaceEnabler:
                 commands = self.generate_bulk_configuration(filtered_interfaces, config_type, config_value)
                 action_name = "Enable" if config_type == 1 else "Disable"
                 print(f"Generated {action_name} configuration commands:")
+            elif config_type == 7:  # Delete interfaces
+                commands = self.generate_bulk_configuration(selected_interfaces, config_type, config_value)
+                print("Generated Delete Interface configuration commands:")
             else:
                 commands = self.generate_bulk_configuration(selected_interfaces, config_type, config_value)
                 print("Generated configuration commands:")
