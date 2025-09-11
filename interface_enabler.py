@@ -46,6 +46,28 @@ class InterfaceEnabler:
         self.logger = logging.getLogger(__name__)
         self.logger.info("Interface Enabler started")
     
+    def natural_sort_key(self, interface_name):
+        """Generate a natural sort key for interface names to sort numerically"""
+        # Split the interface name into parts and convert numeric parts to integers
+        parts = re.split(r'(\d+)', interface_name)
+        result = []
+        for part in parts:
+            if part.isdigit():
+                result.append(int(part))
+            else:
+                result.append(part)
+        return result
+    
+    def extract_port_number(self, interface_name):
+        """Extract the port number from interface name (e.g., 'ge400-0/0/18' -> 18)"""
+        # For interfaces like ge400-0/0/18, get the last number after the last '/'
+        try:
+            return int(interface_name.split('/')[-1])
+        except (ValueError, IndexError):
+            # Fallback: try to find the last number in the string
+            numbers = re.findall(r'\d+', interface_name)
+            return int(numbers[-1]) if numbers else 0
+    
     def get_available_devices(self):
         """Get list of available devices from the Devices directory"""
         if not os.path.exists(self.devices_dir):
@@ -173,7 +195,7 @@ class InterfaceEnabler:
     def select_interfaces(self, physical_interfaces, config_type):
         """Allow user to select which interfaces to configure"""
         interface_list = list(physical_interfaces.keys())
-        interface_list.sort()
+        interface_list.sort(key=self.natural_sort_key)
         
         print(f"\n=== Available Physical Interfaces ({len(interface_list)}) ===")
         for i, interface in enumerate(interface_list, 1):
@@ -185,12 +207,38 @@ class InterfaceEnabler:
         print("  - Enter interface numbers separated by commas (e.g., 1,3,5-8)")
         print("  - Enter 'all' to select all interfaces")
         print("  - Enter 'range' for range selection (e.g., 1-10)")
+        print("  - Enter 'odd' to select interfaces with odd port numbers (ports 1,3,5,7,9...)")
+        print("  - Enter 'even' to select interfaces with even port numbers (ports 0,2,4,6,8...)")
         
         while True:
             selection = input("\nSelect interfaces: ").strip()
             
             if selection.lower() == 'all':
                 return interface_list
+            elif selection.lower() == 'odd':
+                # Select interfaces with odd port numbers (1, 3, 5, 7, 9, 11, 13, 15...)
+                odd_interfaces = []
+                for interface in interface_list:
+                    port_num = self.extract_port_number(interface)
+                    if port_num % 2 == 1:  # Odd port numbers
+                        odd_interfaces.append(interface)
+                print(f"Selected {len(odd_interfaces)} interfaces with odd port numbers:")
+                for interface in odd_interfaces:
+                    port_num = self.extract_port_number(interface)
+                    print(f"  - {interface} (port {port_num})")
+                return odd_interfaces
+            elif selection.lower() == 'even':
+                # Select interfaces with even port numbers (0, 2, 4, 6, 8, 10, 12, 14...)
+                even_interfaces = []
+                for interface in interface_list:
+                    port_num = self.extract_port_number(interface)
+                    if port_num % 2 == 0:  # Even port numbers
+                        even_interfaces.append(interface)
+                print(f"Selected {len(even_interfaces)} interfaces with even port numbers:")
+                for interface in even_interfaces:
+                    port_num = self.extract_port_number(interface)
+                    print(f"  - {interface} (port {port_num})")
+                return even_interfaces
             
             try:
                 selected_interfaces = []
