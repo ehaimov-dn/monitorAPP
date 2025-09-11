@@ -31,3 +31,6 @@ Thumbs.db
 *.tmp
 *.temp
 *.bak
+
+# Ignore boot monitor output files
+monitor/
